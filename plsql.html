@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'></text></svg>">
 <style>
 :root {
   --bg-base:#f5f0e8;--bg-surface:#ede7da;--bg-card:#faf7f2;--bg-card-hover:#fff9f3;
@@ -217,7 +217,7 @@ a{text-decoration:none;color:inherit;}
   <div style="max-width:1000px;margin:0 auto">
     <div class="page-eyebrow">PL/SQL</div>
     <h1 class="page-title">PL/SQL Interview Questions</h1>
-    <p class="page-subtitle">161 questions — Basic to Advanced · Click to expand · + for code &amp; details</p>
+    <p class="page-subtitle">188 questions — Basic to Advanced · Click to expand · + for code &amp; details</p>
   </div>
 </div>
 
@@ -225,10 +225,10 @@ a{text-decoration:none;color:inherit;}
   <div class="filter-section">
     <div class="filter-title"><i class="fas fa-code-branch"></i> Filter Questions</div>
     <div class="filter-tabs">
-      <button class="filter-tab active" data-filter="all">All (161)</button>
-      <button class="filter-tab" data-filter="basic">Basic (46)</button>
-      <button class="filter-tab" data-filter="intermediate">Intermediate (68)</button>
-      <button class="filter-tab" data-filter="advanced">Advanced (47)</button>
+      <button class="filter-tab active" data-filter="all">All (188)</button>
+      <button class="filter-tab" data-filter="basic">Basic (57)</button>
+      <button class="filter-tab" data-filter="intermediate">Intermediate (78)</button>
+      <button class="filter-tab" data-filter="advanced">Advanced (53)</button>
     </div>
     <div class="search-wrap">
       <i class="fas fa-search search-icon"></i>
@@ -663,7 +663,7 @@ END;
       <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
     </button>
     <div class="details-body">
-      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon tbl"><i class="fas fa-table"></i></div><span class="rich-lbl">Sample Data</span><span class="rich-sub">used in example</span></div><div class="rich-s-body" style="padding:16px 18px"><div class=""><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Explicit cursor: DECLARE → OPEN → FETCH → CLOSE
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon tbl"><i class="fas fa-table"></i></div><span class="rich-lbl">Sample Data</span><span class="rich-sub">used in example</span></div><div class="rich-s-body" style="padding:16px 18px"><div class=""><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Explicit cursor: DECLARE  OPEN  FETCH  CLOSE
 DECLARE
   CURSOR c_emp IS
     SELECT employee_id, employee_name, salary
@@ -1304,7 +1304,7 @@ EXCEPTION
   WHEN OTHERS THEN
     DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>DYNAMIC_SQL</th><th>EXECUTED</th><th>ROWS_AFFECTED</th></tr></thead><tbody><tr><td class="">UPDATE employees SET...</td><td class="">✅</td><td class="">2 rows</td></tr><tr><td class="">DROP TABLE temp_tbl</td><td class="">✅</td><td class="">Table removed</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> EXECUTE IMMEDIATE runs SQL assembled as a string at runtime</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Dynamic SQL in PL/SQL allows the execution of SQL statements that are constructed and possibly modified at runtime.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>DYNAMIC_SQL</th><th>EXECUTED</th><th>ROWS_AFFECTED</th></tr></thead><tbody><tr><td class="">UPDATE employees SET...</td><td class=""><i class="fas fa-check-circle" style="color:#276749"></i></td><td class="">2 rows</td></tr><tr><td class="">DROP TABLE temp_tbl</td><td class=""><i class="fas fa-check-circle" style="color:#276749"></i></td><td class="">Table removed</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> EXECUTE IMMEDIATE runs SQL assembled as a string at runtime</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Dynamic SQL in PL/SQL allows the execution of SQL statements that are constructed and possibly modified at runtime.</p></div></div>
     </div>
   </div>
 </div>
@@ -1458,7 +1458,7 @@ BEGIN
   COMMIT;
   DBMS_OUTPUT.PUT_LINE('Updated: ' || SQL%ROWCOUNT);
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQL↔PL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Optimizing PL/SQL code for performance involves several techniques, such as using bulk SQL operations instead of row-by-row processing, minimizing context switches between SQL and PL/SQL, using collections and bulk binding, optimizing loop constructs, and avoiding unnecessary computations within loops.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQLPL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Optimizing PL/SQL code for performance involves several techniques, such as using bulk SQL operations instead of row-by-row processing, minimizing context switches between SQL and PL/SQL, using collections and bulk binding, optimizing loop constructs, and avoiding unnecessary computations within loops.</p></div></div>
     </div>
   </div>
 </div>
@@ -1512,7 +1512,7 @@ BEGIN
   END LOOP;
   CLOSE c;
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQL↔PL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>BULK COLLECT in PL/SQL allows for fetching multiple rows into a collection with a single context switch between SQL and PL/SQL, significantly improving performance over row-by-row fetching.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQLPL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>BULK COLLECT in PL/SQL allows for fetching multiple rows into a collection with a single context switch between SQL and PL/SQL, significantly improving performance over row-by-row fetching.</p></div></div>
     </div>
   </div>
 </div>
@@ -1560,7 +1560,7 @@ EXCEPTION
     DBMS_OUTPUT.PUT_LINE('Bulk errors: ' || SQL%BULK_EXCEPTIONS.COUNT);
     ROLLBACK;
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQL↔PL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The FORALL statement in PL/SQL is used for performing bulk DML operations (INSERT, UPDATE, DELETE) on multiple rows in a single operation.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQLPL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The FORALL statement in PL/SQL is used for performing bulk DML operations (INSERT, UPDATE, DELETE) on multiple rows in a single operation.</p></div></div>
     </div>
   </div>
 </div>
@@ -1651,7 +1651,7 @@ EXCEPTION
     ROLLBACK;  -- undo everything
     DBMS_OUTPUT.PUT_LINE('Transaction rolled back: ' || SQLERRM);
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-wallet" style="color:#b7791f"></i> accounts</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>account_id</th><th>owner</th><th>balance</th></tr></thead><tbody><tr><td>1001</td><td>Alice</td><td>5,000</td></tr><tr><td>1002</td><td>Bob</td><td>3,200</td></tr><tr><td>1003</td><td>Carol</td><td>8,750</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EMP_ID</th><th>EMP_NAME</th><th>DEPT_ID</th><th>SALARY</th><th>STATUS</th></tr></thead><tbody><tr><td class="">205</td><td class="">New Employee</td><td class="">10</td><td class="">50,000</td><td class="">✅ 1 row inserted</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> INSERT successful — use COMMIT to make permanent</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The SAVEPOINT, ROLLBACK, and COMMIT commands manage transactions in PL/SQL.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-wallet" style="color:#b7791f"></i> accounts</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>account_id</th><th>owner</th><th>balance</th></tr></thead><tbody><tr><td>1001</td><td>Alice</td><td>5,000</td></tr><tr><td>1002</td><td>Bob</td><td>3,200</td></tr><tr><td>1003</td><td>Carol</td><td>8,750</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EMP_ID</th><th>EMP_NAME</th><th>DEPT_ID</th><th>SALARY</th><th>STATUS</th></tr></thead><tbody><tr><td class="">205</td><td class="">New Employee</td><td class="">10</td><td class="">50,000</td><td class=""><i class="fas fa-check-circle" style="color:#276749"></i> 1 row inserted</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> INSERT successful — use COMMIT to make permanent</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The SAVEPOINT, ROLLBACK, and COMMIT commands manage transactions in PL/SQL.</p></div></div>
     </div>
   </div>
 </div>
@@ -2068,7 +2068,7 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE('Updated: ' || SQL%ROWCOUNT || ' rows');
   COMMIT;
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>DYNAMIC_SQL</th><th>EXECUTED</th><th>ROWS_AFFECTED</th></tr></thead><tbody><tr><td class="">UPDATE employees SET...</td><td class="">✅</td><td class="">2 rows</td></tr><tr><td class="">DROP TABLE temp_tbl</td><td class="">✅</td><td class="">Table removed</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> EXECUTE IMMEDIATE runs SQL assembled as a string at runtime</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Dynamic SQL in PL/SQL allows the execution of SQL statements that are constructed dynamically at runtime.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>DYNAMIC_SQL</th><th>EXECUTED</th><th>ROWS_AFFECTED</th></tr></thead><tbody><tr><td class="">UPDATE employees SET...</td><td class=""><i class="fas fa-check-circle" style="color:#276749"></i></td><td class="">2 rows</td></tr><tr><td class="">DROP TABLE temp_tbl</td><td class=""><i class="fas fa-check-circle" style="color:#276749"></i></td><td class="">Table removed</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> EXECUTE IMMEDIATE runs SQL assembled as a string at runtime</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Dynamic SQL in PL/SQL allows the execution of SQL statements that are constructed dynamically at runtime.</p></div></div>
     </div>
   </div>
 </div>
@@ -2122,7 +2122,7 @@ BEGIN
     CLOSE c;
   END;
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQL↔PL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The BULK COLLECT INTO clause in PL/SQL enables the fetching of multiple rows into a PL/SQL collection with a single operation.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQLPL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The BULK COLLECT INTO clause in PL/SQL enables the fetching of multiple rows into a PL/SQL collection with a single operation.</p></div></div>
     </div>
   </div>
 </div>
@@ -2580,7 +2580,7 @@ WHEN NOT MATCHED THEN
 ;
 
 DBMS_OUTPUT.PUT_LINE('Merge complete. Rows: ' || SQL%ROWCOUNT);
-COMMIT;</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EMP_ID</th><th>EMP_NAME</th><th>ACTION</th><th>RESULT</th></tr></thead><tbody><tr><td class="">101</td><td class="">Alice Johnson</td><td class="">UPDATED (matched)</td><td class="">Salary → 55,000</td></tr><tr><td class="">102</td><td class="">Bob Smith</td><td class="">UPDATED (matched)</td><td class="">Salary → 68,200</td></tr><tr><td class="">999</td><td class="">New Hire</td><td class="">INSERTED (not matched)</td><td class="">New row added</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> MERGE: 2 rows updated + 1 inserted in one atomic statement</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The MERGE statement in PL/SQL combines insert, update, and delete operations into a single statement, based on the matching conditions specified.</p></div></div>
+COMMIT;</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EMP_ID</th><th>EMP_NAME</th><th>ACTION</th><th>RESULT</th></tr></thead><tbody><tr><td class="">101</td><td class="">Alice Johnson</td><td class="">UPDATED (matched)</td><td class="">Salary  55,000</td></tr><tr><td class="">102</td><td class="">Bob Smith</td><td class="">UPDATED (matched)</td><td class="">Salary  68,200</td></tr><tr><td class="">999</td><td class="">New Hire</td><td class="">INSERTED (not matched)</td><td class="">New row added</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> MERGE: 2 rows updated + 1 inserted in one atomic statement</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The MERGE statement in PL/SQL combines insert, update, and delete operations into a single statement, based on the matching conditions specified.</p></div></div>
     </div>
   </div>
 </div>
@@ -2929,7 +2929,7 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE('Updated: ' || SQL%ROWCOUNT || ' rows');
   COMMIT;
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQL↔PL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>PL/SQL collections, such as associative arrays, nested tables, and varrays, are used to handle sets of data as single entities.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQLPL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>PL/SQL collections, such as associative arrays, nested tables, and varrays, are used to handle sets of data as single entities.</p></div></div>
     </div>
   </div>
 </div>
@@ -3134,7 +3134,7 @@ BEGIN
   EXECUTE IMMEDIATE 'ALTER SESSION SET OPTIMIZER_MODE = ' || v_orig_optimizer;
   DBMS_OUTPUT.PUT_LINE('Batch complete for dept ' || p_dept_id);
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQL↔PL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Managing and optimizing session-level settings for PL/SQL procedures involves the strategic use of the ALTER SESSION command.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQLPL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Managing and optimizing session-level settings for PL/SQL procedures involves the strategic use of the ALTER SESSION command.</p></div></div>
     </div>
   </div>
 </div>
@@ -3182,7 +3182,7 @@ BEGIN
     v_min_id := v_min_id + p_chunk_size;
   END LOOP;
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQL↔PL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>To ensure the scalability of PL/SQL applications, developers employ strategies such as code optimization, efficient data access patterns, and the use of advanced PL/SQL features like bulk binding.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQLPL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>To ensure the scalability of PL/SQL applications, developers employ strategies such as code optimization, efficient data access patterns, and the use of advanced PL/SQL features like bulk binding.</p></div></div>
     </div>
   </div>
 </div>
@@ -3381,7 +3381,7 @@ CREATE OR REPLACE FUNCTION fnc_sanitize(p_input VARCHAR2) RETURN VARCHAR2 IS
 BEGIN
   RETURN REGEXP_REPLACE(p_input, '[^A-Za-z0-9 _-]', '');
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>APPROACH</th><th>INPUT</th><th>SAFE</th><th>RESULT</th></tr></thead><tbody><tr><td class="">String concat</td><td class="">' OR '1'='1</td><td class="">❌ No</td><td class="">Returns ALL 4 rows — security breach</td></tr><tr><td class="">Bind variable :p1</td><td class="">' OR '1'='1</td><td class="">✅ Yes</td><td class="">0 rows — treated as literal data</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> Bind variables prevent SQL injection — the #1 Oracle security best practice</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Securing PL/SQL code against SQL injection attacks involves using bind variables to separate SQL code from data, thereby preventing attackers from injecting malicious SQL.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>APPROACH</th><th>INPUT</th><th>SAFE</th><th>RESULT</th></tr></thead><tbody><tr><td class="">String concat</td><td class="">' OR '1'='1</td><td class=""><i class="fas fa-times-circle" style="color:#b91c1c"></i> No</td><td class="">Returns ALL 4 rows — security breach</td></tr><tr><td class="">Bind variable :p1</td><td class="">' OR '1'='1</td><td class=""><i class="fas fa-check-circle" style="color:#276749"></i> Yes</td><td class="">0 rows — treated as literal data</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> Bind variables prevent SQL injection — the #1 Oracle security best practice</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Securing PL/SQL code against SQL injection attacks involves using bind variables to separate SQL code from data, thereby preventing attackers from injecting malicious SQL.</p></div></div>
     </div>
   </div>
 </div>
@@ -3437,7 +3437,7 @@ BEGIN
   -- ... critical operations ...
   COMMIT;
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>DYNAMIC_SQL</th><th>EXECUTED</th><th>ROWS_AFFECTED</th></tr></thead><tbody><tr><td class="">UPDATE employees SET...</td><td class="">✅</td><td class="">2 rows</td></tr><tr><td class="">DROP TABLE temp_tbl</td><td class="">✅</td><td class="">Table removed</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> EXECUTE IMMEDIATE runs SQL assembled as a string at runtime</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Ensuring the integrity of data in concurrent PL/SQL transactions requires leveraging Oracle's locking mechanisms and transaction isolation levels.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>DYNAMIC_SQL</th><th>EXECUTED</th><th>ROWS_AFFECTED</th></tr></thead><tbody><tr><td class="">UPDATE employees SET...</td><td class=""><i class="fas fa-check-circle" style="color:#276749"></i></td><td class="">2 rows</td></tr><tr><td class="">DROP TABLE temp_tbl</td><td class=""><i class="fas fa-check-circle" style="color:#276749"></i></td><td class="">Table removed</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> EXECUTE IMMEDIATE runs SQL assembled as a string at runtime</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Ensuring the integrity of data in concurrent PL/SQL transactions requires leveraging Oracle's locking mechanisms and transaction isolation levels.</p></div></div>
     </div>
   </div>
 </div>
@@ -4124,7 +4124,7 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE('Rows updated: ' || SQL%ROWCOUNT);
   COMMIT;
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQL↔PL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>PL/SQL collections such as associative arrays, nested tables, and VARRAYs are used to handle bulk data operations efficiently by allowing operations on sets of data as a single unit.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OPERATION</th><th>ROWS</th><th>CONTEXT_SWITCHES</th></tr></thead><tbody><tr><td class="">Row-by-row</td><td class="">4</td><td class="">4 (slow)</td></tr><tr><td class="">BULK COLLECT</td><td class="">4</td><td class="">1 (fast)</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> BULK COLLECT fetches all rows at once — reduces SQLPL/SQL round trips</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>PL/SQL collections such as associative arrays, nested tables, and VARRAYs are used to handle bulk data operations efficiently by allowing operations on sets of data as a single unit.</p></div></div>
     </div>
   </div>
 </div>
@@ -4761,7 +4761,7 @@ WHEN MATCHED THEN
 WHEN NOT MATCHED THEN
   INSERT (employee_id, employee_name, salary)
   VALUES (src.employee_id, src.employee_name, src.salary);
-COMMIT;</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EMP_ID</th><th>EMP_NAME</th><th>ACTION</th><th>RESULT</th></tr></thead><tbody><tr><td class="">101</td><td class="">Alice Johnson</td><td class="">UPDATED (matched)</td><td class="">Salary → 55,000</td></tr><tr><td class="">102</td><td class="">Bob Smith</td><td class="">UPDATED (matched)</td><td class="">Salary → 68,200</td></tr><tr><td class="">999</td><td class="">New Hire</td><td class="">INSERTED (not matched)</td><td class="">New row added</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> MERGE: 2 rows updated + 1 inserted in one atomic statement</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The MERGE command in SQL is used to combine insert, update, and delete operations into a single statement.</p></div></div>
+COMMIT;</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EMP_ID</th><th>EMP_NAME</th><th>ACTION</th><th>RESULT</th></tr></thead><tbody><tr><td class="">101</td><td class="">Alice Johnson</td><td class="">UPDATED (matched)</td><td class="">Salary  55,000</td></tr><tr><td class="">102</td><td class="">Bob Smith</td><td class="">UPDATED (matched)</td><td class="">Salary  68,200</td></tr><tr><td class="">999</td><td class="">New Hire</td><td class="">INSERTED (not matched)</td><td class="">New row added</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> MERGE: 2 rows updated + 1 inserted in one atomic statement</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The MERGE command in SQL is used to combine insert, update, and delete operations into a single statement.</p></div></div>
     </div>
   </div>
 </div>
@@ -5988,7 +5988,7 @@ WHEN MATCHED THEN
 WHEN NOT MATCHED THEN
   INSERT (employee_id, employee_name, salary)
   VALUES (src.employee_id, src.employee_name, src.salary);
-COMMIT;</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EMP_ID</th><th>EMP_NAME</th><th>ACTION</th><th>RESULT</th></tr></thead><tbody><tr><td class="">101</td><td class="">Alice Johnson</td><td class="">UPDATED (matched)</td><td class="">Salary → 55,000</td></tr><tr><td class="">102</td><td class="">Bob Smith</td><td class="">UPDATED (matched)</td><td class="">Salary → 68,200</td></tr><tr><td class="">999</td><td class="">New Hire</td><td class="">INSERTED (not matched)</td><td class="">New row added</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> MERGE: 2 rows updated + 1 inserted in one atomic statement</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>SQL functions are used for various purposes like performing calculations, modifying data items, manipulating query output, formatting dates and numbers, and converting data types.</p></div></div>
+COMMIT;</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="rich-two-tbl" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div><div><div class="rich-tbl-lbl"><i class="fas fa-building" style="color:#7c3aed"></i> departments</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>dept_id</th><th>dept_name</th></tr></thead><tbody><tr><td>10</td><td>Engineering</td></tr><tr><td>20</td><td>Marketing</td></tr><tr><td>30</td><td>Finance</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EMP_ID</th><th>EMP_NAME</th><th>ACTION</th><th>RESULT</th></tr></thead><tbody><tr><td class="">101</td><td class="">Alice Johnson</td><td class="">UPDATED (matched)</td><td class="">Salary  55,000</td></tr><tr><td class="">102</td><td class="">Bob Smith</td><td class="">UPDATED (matched)</td><td class="">Salary  68,200</td></tr><tr><td class="">999</td><td class="">New Hire</td><td class="">INSERTED (not matched)</td><td class="">New row added</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> MERGE: 2 rows updated + 1 inserted in one atomic statement</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>SQL functions are used for various purposes like performing calculations, modifying data items, manipulating query output, formatting dates and numbers, and converting data types.</p></div></div>
     </div>
   </div>
 </div>
@@ -6249,7 +6249,7 @@ EXCEPTION
   WHEN NO_DATA_FOUND THEN
     DBMS_OUTPUT.PUT_LINE('Not found');
 END;
-/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>NORMAL_FORM</th><th>RULE_VIOLATED</th><th>FIX</th></tr></thead><tbody><tr><td class="">0NF → 1NF</td><td class="">Repeating groups: phone='123,456'</td><td class="">Separate into individual rows</td></tr><tr><td class="">1NF → 2NF</td><td class="">Partial dependency on composite PK</td><td class="">Move to separate table</td></tr><tr><td class="">2NF → 3NF</td><td class="">Transitive: emp→dept_id→dept_name</td><td class="">Move dept_name to departments table</td></tr><tr><td class="">3NF → BCNF</td><td class="">Determinant not a candidate key</td><td class="">Decompose further</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> Normalize step by step — each form removes a specific type of redundancy</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Normalization is a database design technique that organizes tables to reduce redundancy and dependency.</p></div></div>
+/</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>NORMAL_FORM</th><th>RULE_VIOLATED</th><th>FIX</th></tr></thead><tbody><tr><td class="">0NF  1NF</td><td class="">Repeating groups: phone='123,456'</td><td class="">Separate into individual rows</td></tr><tr><td class="">1NF  2NF</td><td class="">Partial dependency on composite PK</td><td class="">Move to separate table</td></tr><tr><td class="">2NF  3NF</td><td class="">Transitive: empdept_iddept_name</td><td class="">Move dept_name to departments table</td></tr><tr><td class="">3NF  BCNF</td><td class="">Determinant not a candidate key</td><td class="">Decompose further</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> Normalize step by step — each form removes a specific type of redundancy</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Normalization is a database design technique that organizes tables to reduce redundancy and dependency.</p></div></div>
     </div>
   </div>
 </div>
@@ -6535,8 +6535,1212 @@ EXCEPTION
 END;
 /</code></pre></div></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon before-ic"><i class="fas fa-clock-rotate-left"></i></div><span class="rich-lbl">Before Running</span><span class="rich-sub">initial state</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill before"><i class="fas fa-circle-dot"></i> Before</div><div class="" style="margin-top:10px"><div><div class="rich-tbl-lbl"><i class="fas fa-circle-user" style="color:#2d6446"></i> employees</div><div class="rich-tbl-wrap"><table class="rich-tbl"><thead><tr><th>emp_id</th><th>emp_name</th><th>dept_id</th><th>salary</th></tr></thead><tbody><tr><td>101</td><td>Alice Johnson</td><td>10</td><td>50,000</td></tr><tr><td>102</td><td>Bob Smith</td><td>20</td><td>62,000</td></tr><tr><td>103</td><td>Carol White</td><td>10</td><td>55,000</td></tr><tr><td>104</td><td>Dave Brown</td><td>20</td><td>70,000</td></tr></tbody></table></div></div></div><p class="rich-note"><i class="fas fa-info-circle"></i> Data state before execution.</p></div></div><div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">after execution</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>EXCEPTION</th><th>WHEN_RAISED</th><th>HANDLED_BY</th><th>OUTCOME</th></tr></thead><tbody><tr><td class="">NO_DATA_FOUND</td><td class="">SELECT INTO = 0 rows</td><td class="">WHEN NO_DATA_FOUND</td><td class="">Continue after message</td></tr><tr><td class="">TOO_MANY_ROWS</td><td class="">SELECT INTO > 1 row</td><td class="">WHEN OTHERS</td><td class="">Rollback + log</td></tr></tbody></table></div><p class="rich-note" style="margin-top:8px"><i class="fas fa-info-circle"></i> Exceptions prevent unhandled errors from crashing the PL/SQL block</p></div></div><div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>A DBMS is a software for data management.</p></div></div>
     </div>
+  </div></div>
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q162. Discuss SQLERRM and SQLCODE in PL/SQL.</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">SQLCODE and SQLERRM are built-in functions available inside PL/SQL exception handlers. SQLCODE returns the error number (negative for Oracle errors, e.g., -1403 for NO_DATA_FOUND). SQLERRM returns the error message text associated with the current SQLCODE. They are used together to log or display meaningful error information without hardcoding error numbers.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">DECLARE
+  v_salary NUMBER;
+BEGIN
+  SELECT salary INTO v_salary
+  FROM   employees
+  WHERE  employee_id = 9999;  -- does not exist
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error Code   : ' || SQLCODE);
+    DBMS_OUTPUT.PUT_LINE('Error Message: ' || SQLERRM);
+    -- Log to audit table
+    INSERT INTO error_log(error_code, error_msg, log_date)
+    VALUES(SQLCODE, SQLERRM, SYSDATE);
+    COMMIT;
+END;
+/</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Error Code   : -1403</td></tr><tr><td class="">Error Message: ORA-01403: no data found</td></tr><tr><td class="">1 row inserted into error_log</td></tr><tr><td class="">WHEN OTHERS catches any unhandled exception</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>SQLCODE and SQLERRM are built-in functions available inside PL/SQL exception handlers.</p></div></div>
+    </div>
   </div>
 </div>
+
+<div class="question-container" data-difficulty="advanced">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q163. What does the Oracle error ORA-03113 mean and when does it occur?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:rgba(45,100,70,0.08);color:#2d6446;border:1px solid rgba(45,100,70,0.2)">advanced</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">ORA-03113 is 'end-of-file on communication channel'. It means the connection between the client (SQL*Plus, SQL Developer, application) and the Oracle database server was lost unexpectedly during a session. Common causes include: database server crash, network failure, Oracle listener timeout, idle session timeout policy, or the DBA killing the session. The client receives this error when it tries to send the next request after the connection dropped.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- ORA-03113: end-of-file on communication channel
+-- Causes:
+--   1. Database server crashed or restarted
+--   2. Network failure / firewall timeout
+--   3. Session killed by DBA: ALTER SYSTEM KILL SESSION '123,456';
+--   4. Idle session timeout in sqlnet.ora:
+--      SQLNET.EXPIRE_TIME = 10  (minutes)
+
+-- Check in alert log:
+-- $ORACLE_BASE/diag/rdbms/&lt;db&gt;/&lt;SID&gt;/trace/alert_&lt;SID&gt;.log
+
+-- Check active sessions
+SELECT sid, serial#, username, status, last_call_et
+FROM   v$session
+WHERE  username IS NOT NULL
+ORDER  BY last_call_et DESC;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">ORA-03113: end-of-file on communication channel</td></tr><tr><td class="">Check alert log for ORA-07445 or ORA-00600 (crash)</td></tr><tr><td class="">Check network: ping db_host</td></tr><tr><td class="">Check DBA_AUDIT_TRAIL for killed sessions</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>ORA-03113 is 'end-of-file on communication channel'.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q164. What is RAISE_APPLICATION_ERROR and how is it used?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">RAISE_APPLICATION_ERROR is a built-in procedure used to raise user-defined error messages from PL/SQL code. It allows developers to create meaningful custom error messages that propagate back to the calling application just like Oracle built-in errors. Error codes must be in the range -20000 to -20999 (reserved for user-defined errors). The second parameter is the error message string (max 512 chars). An optional third parameter (TRUE) appends the message to the existing error stack.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">CREATE OR REPLACE PROCEDURE prc_update_salary(
+  p_emp_id IN NUMBER,
+  p_salary IN NUMBER
+) IS
+  v_dept_id employees.department_id%TYPE;
+BEGIN
+  -- Validate salary
+  IF p_salary &lt; 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Salary cannot be negative: ' || p_salary);
+  END IF;
+  IF p_salary &gt; 500000 THEN
+    RAISE_APPLICATION_ERROR(-20002, 'Salary exceeds maximum allowed: 500,000');
+  END IF;
+
+  UPDATE employees
+  SET    salary = p_salary
+  WHERE  employee_id = p_emp_id;
+
+  IF SQL%ROWCOUNT = 0 THEN
+    RAISE_APPLICATION_ERROR(-20003, 'Employee ID not found: ' || p_emp_id);
+  END IF;
+  COMMIT;
+END;
+/
+-- Call:
+BEGIN prc_update_salary(101, -5000); END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">ORA-20001: Salary cannot be negative: -5000</td></tr><tr><td class="">ORA-06512: at "HR.PRC_UPDATE_SALARY", line 7</td></tr><tr><td class="">Error range: -20000 to -20999 (user-defined only)</td></tr><tr><td class="">Propagates to calling application like built-in Oracle errors</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>RAISE_APPLICATION_ERROR is a built-in procedure used to raise user-defined error messages from PL/SQL code.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q165. Describe IN, OUT, and IN OUT parameters in PL/SQL.</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">PL/SQL subprogram parameters have three modes. IN (default) passes a read-only value into the subprogram — the parameter acts like a constant. OUT passes a value back to the caller — the parameter starts as NULL inside and the subprogram writes to it. IN OUT does both — it passes a value in and the subprogram can read and modify it, sending the modified value back to the caller. IN parameters are passed by reference; OUT and IN OUT by value (unless NOCOPY hint is used).</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">CREATE OR REPLACE PROCEDURE prc_salary_info(
+  p_emp_id     IN     NUMBER,       -- read-only input
+  p_emp_name   OUT    VARCHAR2,     -- output only
+  p_salary     IN OUT NUMBER        -- read + write
+) IS
+BEGIN
+  SELECT employee_name, salary
+  INTO   p_emp_name, p_salary
+  FROM   employees
+  WHERE  employee_id = p_emp_id;
+
+  -- Modify IN OUT parameter (apply 10% bonus)
+  p_salary := p_salary * 1.10;
+END;
+/
+-- Call:
+DECLARE
+  v_name   VARCHAR2(100);
+  v_salary NUMBER := 0;  -- IN OUT must be initialized
+BEGIN
+  prc_salary_info(101, v_name, v_salary);
+  DBMS_OUTPUT.PUT_LINE(v_name || ' | New salary: ' || v_salary);
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Alice Johnson | New salary: 55000</td></tr><tr><td class="">IN   : read-only, cannot be assigned inside procedure</td></tr><tr><td class="">OUT  : write-only, starts as NULL</td></tr><tr><td class="">IN OUT: read and write, value passed both ways</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>PL/SQL subprogram parameters have three modes.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q166. Name and describe the predefined exceptions in PL/SQL.</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">Oracle PL/SQL provides predefined exceptions for common error conditions that are automatically raised by the runtime engine. Key ones include: NO_DATA_FOUND (SELECT INTO returns 0 rows), TOO_MANY_ROWS (SELECT INTO returns more than 1 row), DUP_VAL_ON_INDEX (unique constraint violated on INSERT/UPDATE), ZERO_DIVIDE (division by zero), INVALID_NUMBER (string cannot be converted to number), VALUE_ERROR (arithmetic or conversion error), LOGIN_DENIED (invalid username/password), NOT_LOGGED_ON (not connected), CURSOR_ALREADY_OPEN (reopening an open cursor).</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">DECLARE
+  v_salary NUMBER;
+  v_text   VARCHAR2(10);
+BEGIN
+  -- NO_DATA_FOUND
+  SELECT salary INTO v_salary FROM employees WHERE employee_id = 9999;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    DBMS_OUTPUT.PUT_LINE('No employee with ID 9999');
+  WHEN TOO_MANY_ROWS THEN
+    DBMS_OUTPUT.PUT_LINE('Multiple rows returned for SELECT INTO');
+  WHEN DUP_VAL_ON_INDEX THEN
+    DBMS_OUTPUT.PUT_LINE('Duplicate value violates unique constraint');
+  WHEN ZERO_DIVIDE THEN
+    DBMS_OUTPUT.PUT_LINE('Division by zero error');
+  WHEN INVALID_NUMBER THEN
+    DBMS_OUTPUT.PUT_LINE('Invalid number conversion');
+  WHEN VALUE_ERROR THEN
+    DBMS_OUTPUT.PUT_LINE('Arithmetic or size error');
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Unhandled: ' || SQLCODE || ' - ' || SQLERRM);
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">No employee with ID 9999</td></tr><tr><td class="">Exception handled — execution continues after block</td></tr><tr><td class="">WHEN OTHERS: always put last — catches anything unhandled</td></tr><tr><td class="">Use RAISE to re-raise after logging</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Oracle PL/SQL provides predefined exceptions for common error conditions that are automatically raised by the runtime engine.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q167. What is the difference between actual and formal parameters in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">Formal parameters are the parameters declared in the procedure or function definition — they define the name, mode (IN/OUT/IN OUT), and datatype. Actual parameters are the real values or variables passed by the caller when invoking the subprogram. Actual parameters must be compatible with the corresponding formal parameters in type and mode. Parameters can be passed positionally (by order) or by name using the =&gt; notation, allowing any order and skipping defaulted parameters.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Formal parameters (in definition)
+CREATE OR REPLACE PROCEDURE prc_raise_salary(
+  p_emp_id  IN NUMBER,        -- formal param 1
+  p_pct     IN NUMBER := 10,  -- formal param 2 (default 10%)
+  p_msg     OUT VARCHAR2       -- formal param 3
+) IS
+BEGIN
+  UPDATE employees SET salary = salary * (1 + p_pct/100)
+  WHERE  employee_id = p_emp_id;
+  p_msg := 'Salary raised by ' || p_pct || '%';
+END;
+/
+
+-- Actual parameters (at call site)
+DECLARE
+  v_result VARCHAR2(200);
+BEGIN
+  -- Positional: actual = 101, 15, v_result
+  prc_raise_salary(101, 15, v_result);
+  -- Named notation (any order, skip defaults):
+  prc_raise_salary(p_emp_id =&gt; 102, p_msg =&gt; v_result);
+  DBMS_OUTPUT.PUT_LINE(v_result);
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Salary raised by 15%</td></tr><tr><td class="">Salary raised by 10% (default used)</td></tr><tr><td class="">Named notation: p_emp_id => 102 — any order allowed</td></tr><tr><td class="">Default parameters can be omitted by caller</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Formal parameters are the parameters declared in the procedure or function definition — they define the name, mode (IN/OUT/IN OUT), and datatype.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q168. How do you restrict string length in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">String length can be restricted in PL/SQL using two approaches. First, declare the variable with a maximum length using VARCHAR2(n) which raises VALUE_ERROR if the assigned string exceeds n characters. Second, use the SUBSTR() function to explicitly truncate a string to a maximum length before assignment or output. For database columns, the column definition itself enforces length. The RTRIM function can also trim trailing spaces before length validation.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">DECLARE
+  -- Method 1: VARCHAR2(n) — raises VALUE_ERROR if exceeded
+  v_name    VARCHAR2(20);   -- max 20 chars
+  v_code    CHAR(5);        -- fixed 5 chars, padded with spaces
+
+  -- Method 2: SUBSTR to safely truncate
+  v_desc    VARCHAR2(200);
+  v_long    VARCHAR2(4000) := 'This is a very long description that exceeds limit';
+BEGIN
+  v_name := 'Alice Johnson';       -- 13 chars — OK
+  -- v_name := 'A very long name over 20 chars'; -- raises VALUE_ERROR
+
+  -- SUBSTR: safely take first 20 chars
+  v_name := SUBSTR(v_long, 1, 20);
+  DBMS_OUTPUT.PUT_LINE('Truncated: ' || v_name);
+
+  -- LENGTH check before assign
+  IF LENGTH(v_long) &gt; 200 THEN
+    v_desc := SUBSTR(v_long, 1, 200);
+  ELSE
+    v_desc := v_long;
+  END IF;
+  DBMS_OUTPUT.PUT_LINE('Length: ' || LENGTH(v_desc));
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Truncated: This is a very lon</td></tr><tr><td class="">Length: 50</td></tr><tr><td class="">VARCHAR2(20): VALUE_ERROR if string > 20 chars</td></tr><tr><td class="">SUBSTR(str, 1, n): always returns at most n characters</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>String length can be restricted in PL/SQL using two approaches.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q169. What is the UTL_FILE package used for in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">UTL_FILE is an Oracle built-in package that allows PL/SQL code to read from and write to operating system files on the Oracle database server. It is useful for generating reports, export files, log files, and data feeds from within PL/SQL. The directory must be pre-created as an Oracle DIRECTORY object (not a plain path string) by a DBA, and the database user must have READ/WRITE privilege on that directory. Key procedures include FOPEN, PUT_LINE, GET_LINE, FCLOSE, and FFLUSH.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Step 1: DBA creates directory (one-time)
+-- CREATE OR REPLACE DIRECTORY EXPORT_DIR AS '/oracle/exports';
+-- GRANT READ, WRITE ON DIRECTORY EXPORT_DIR TO HR;
+
+-- Step 2: Write file from PL/SQL
+DECLARE
+  v_file  UTL_FILE.FILE_TYPE;
+BEGIN
+  -- Open file for writing
+  v_file := UTL_FILE.FOPEN('EXPORT_DIR', 'employees.csv', 'W');
+
+  -- Write header
+  UTL_FILE.PUT_LINE(v_file, 'EMP_ID,EMP_NAME,SALARY,DEPT');
+
+  -- Write data rows
+  FOR r IN (SELECT employee_id, employee_name, salary, department_id
+            FROM   employees ORDER BY employee_id) LOOP
+    UTL_FILE.PUT_LINE(v_file,
+      r.employee_id || ',' || r.employee_name || ','
+      || r.salary || ',' || r.department_id);
+  END LOOP;
+
+  UTL_FILE.FCLOSE(v_file);
+  DBMS_OUTPUT.PUT_LINE('File written: employees.csv');
+EXCEPTION
+  WHEN UTL_FILE.INVALID_PATH THEN
+    DBMS_OUTPUT.PUT_LINE('Invalid directory — check DIRECTORY object');
+  WHEN OTHERS THEN
+    UTL_FILE.FCLOSE(v_file); RAISE;
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">File written: employees.csv</td></tr><tr><td class="">File location: /oracle/exports/employees.csv</td></tr><tr><td class="">Contents: EMP_ID,EMP_NAME,SALARY,DEPT</td></tr><tr><td class="">101,Alice Johnson,50000,10</td></tr><tr><td class="">102,Bob Smith,62000,20</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>UTL_FILE is an Oracle built-in package that allows PL/SQL code to read from and write to operating system files on the Oracle database server.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q170. Describe the different cursor types in PL/SQL.</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">PL/SQL has three cursor types. Implicit cursors are automatically created by Oracle for every DML (INSERT/UPDATE/DELETE) and SELECT INTO statement — attributes like SQL%ROWCOUNT and SQL%FOUND give information about the last operation. Explicit cursors are declared by the developer using CURSOR keyword for multi-row SELECT queries — the developer controls OPEN, FETCH, and CLOSE. REF CURSORs (cursor variables) are pointers to a query result set that can be opened for different queries at runtime and passed between subprograms.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Implicit cursor (auto-created)
+BEGIN
+  UPDATE employees SET salary = salary * 1.1 WHERE department_id = 10;
+  DBMS_OUTPUT.PUT_LINE(SQL%ROWCOUNT || ' rows updated');
+END;
+
+-- Explicit cursor
+DECLARE
+  CURSOR c_emp IS
+    SELECT employee_id, employee_name, salary
+    FROM   employees WHERE department_id = 10;
+  v_emp c_emp%ROWTYPE;
+BEGIN
+  OPEN c_emp;
+  LOOP
+    FETCH c_emp INTO v_emp;
+    EXIT WHEN c_emp%NOTFOUND;
+    DBMS_OUTPUT.PUT_LINE(v_emp.employee_name || ': ' || v_emp.salary);
+  END LOOP;
+  CLOSE c_emp;
+END;
+
+-- REF CURSOR (dynamic)
+DECLARE
+  TYPE t_ref IS REF CURSOR;
+  v_cur t_ref;
+  v_name VARCHAR2(100);
+BEGIN
+  OPEN v_cur FOR SELECT employee_name FROM employees;
+  FETCH v_cur INTO v_name;
+  CLOSE v_cur;
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Implicit: 2 rows updated (SQL%ROWCOUNT = 2)</td></tr><tr><td class="">Explicit cursor fetches: Alice Johnson: 50000</td></tr><tr><td class="">                         Carol White: 55000</td></tr><tr><td class="">REF CURSOR: opened for dynamic query, can be reused</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>PL/SQL has three cursor types.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q171. How do you check if a cursor is open in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">Use the cursor attribute %ISOPEN to check if a cursor is currently open. This returns TRUE if the cursor is open, FALSE otherwise. It is good practice to check %ISOPEN before OPEN (to avoid CURSOR_ALREADY_OPEN error) and before CLOSE (to avoid invalid cursor error). For implicit cursors, SQL%ISOPEN always returns FALSE because Oracle automatically opens and closes them.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">DECLARE
+  CURSOR c_emp IS
+    SELECT employee_id, employee_name
+    FROM   employees
+    WHERE  department_id = 10;
+BEGIN
+  -- Check before opening
+  IF NOT c_emp%ISOPEN THEN
+    OPEN c_emp;
+    DBMS_OUTPUT.PUT_LINE('Cursor opened: ' || c_emp%ISOPEN);
+  END IF;
+
+  -- Fetch all rows
+  FOR r IN c_emp LOOP
+    DBMS_OUTPUT.PUT_LINE(r.employee_name);
+  END LOOP;
+
+  -- Check before closing
+  IF c_emp%ISOPEN THEN
+    CLOSE c_emp;
+    DBMS_OUTPUT.PUT_LINE('Cursor closed');
+  END IF;
+
+  -- SQL% — implicit cursor (always FALSE)
+  UPDATE employees SET salary = salary * 1.1 WHERE department_id = 10;
+  DBMS_OUTPUT.PUT_LINE('SQL%ISOPEN: ' || CASE WHEN SQL%ISOPEN THEN 'TRUE' ELSE 'FALSE' END);
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Cursor opened: TRUE</td></tr><tr><td class="">Alice Johnson</td></tr><tr><td class="">Carol White</td></tr><tr><td class="">Cursor closed</td></tr><tr><td class="">SQL%ISOPEN: FALSE (implicit always closed after statement)</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Use the cursor attribute %ISOPEN to check if a cursor is currently open.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q172. Differentiate between triggers and stored procedures in PL/SQL.</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">Stored procedures are named PL/SQL blocks explicitly executed by a user, application, or another subprogram using EXECUTE or CALL. They accept parameters and perform actions on demand. Triggers are PL/SQL blocks that fire automatically in response to specific database events (INSERT, UPDATE, DELETE on a table, or DDL/system events). Triggers cannot accept parameters, cannot be called directly, and are invisible to the end user. Stored procedures are best for reusable business logic; triggers for enforcing rules automatically.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Stored Procedure: explicitly called
+CREATE OR REPLACE PROCEDURE prc_audit_salary(
+  p_emp_id IN NUMBER, p_new_sal IN NUMBER
+) IS
+BEGIN
+  INSERT INTO salary_audit(emp_id, new_salary, changed_by, changed_date)
+  VALUES(p_emp_id, p_new_sal, USER, SYSDATE);
+  COMMIT;
+END;
+-- Call explicitly:
+-- EXEC prc_audit_salary(101, 60000);
+
+-- Trigger: fires automatically
+CREATE OR REPLACE TRIGGER trg_salary_audit
+AFTER UPDATE OF salary ON employees
+FOR EACH ROW
+BEGIN
+  -- Fires automatically on UPDATE — no explicit call needed
+  INSERT INTO salary_audit(emp_id, old_salary, new_salary, changed_by, changed_date)
+  VALUES(:OLD.employee_id, :OLD.salary, :NEW.salary, USER, SYSDATE);
+END;
+-- Fires automatically when:
+-- UPDATE employees SET salary = 60000 WHERE employee_id = 101;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Stored Proc: called explicitly — EXEC prc_audit_salary(101, 60000)</td></tr><tr><td class="">Trigger: fires automatically on UPDATE employees</td></tr><tr><td class="">Trigger: no parameters, uses :OLD and :NEW pseudorecords</td></tr><tr><td class="">Trigger cannot be called directly</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Stored procedures are named PL/SQL blocks explicitly executed by a user, application, or another subprogram using EXECUTE or CALL.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q173. What is a database trigger and what are its types?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">A database trigger is a named PL/SQL block stored in the database that executes automatically in response to a specified event without being explicitly called. Trigger types: DML triggers fire on INSERT, UPDATE, or DELETE on a table (BEFORE or AFTER, at row level or statement level). INSTEAD OF triggers fire on views to intercept DML. DDL triggers fire on CREATE, ALTER, or DROP statements. System/database triggers fire on database events like LOGON, LOGOFF, STARTUP, SHUTDOWN, and SERVERERROR.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- BEFORE INSERT trigger: auto-set audit fields
+CREATE OR REPLACE TRIGGER trg_emp_before_insert
+BEFORE INSERT ON employees
+FOR EACH ROW   -- row-level
+BEGIN
+  :NEW.created_by   := USER;
+  :NEW.created_date := SYSDATE;
+  IF :NEW.employee_id IS NULL THEN
+    :NEW.employee_id := emp_seq.NEXTVAL;
+  END IF;
+END;
+
+-- AFTER DELETE trigger: archive deleted rows
+CREATE OR REPLACE TRIGGER trg_emp_after_delete
+AFTER DELETE ON employees
+FOR EACH ROW
+BEGIN
+  INSERT INTO employees_archive
+  VALUES(:OLD.employee_id, :OLD.employee_name, :OLD.salary, SYSDATE);
+END;
+
+-- INSTEAD OF trigger: make view updatable
+CREATE OR REPLACE TRIGGER trg_v_emp_upd
+INSTEAD OF UPDATE ON v_dept_employees
+FOR EACH ROW
+BEGIN
+  UPDATE employees SET salary = :NEW.salary
+  WHERE  employee_id = :OLD.employee_id;
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">BEFORE INSERT: employee_id auto-assigned from sequence</td></tr><tr><td class="">AFTER DELETE: old row archived to employees_archive</td></tr><tr><td class="">INSTEAD OF: UPDATE on view redirected to base table</td></tr><tr><td class="">Types: BEFORE/AFTER, Row/Statement, INSTEAD OF, DDL, System</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>A database trigger is a named PL/SQL block stored in the database that executes automatically in response to a specified event without being explicitly called.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q174. What is the difference between runtime errors and syntax errors in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">Syntax errors (compile-time errors) occur when the PL/SQL code has incorrect grammar — wrong keywords, missing semicolons, undeclared variables. These are detected at compile time before any code runs and are shown in DBA_ERRORS. Runtime errors (exceptions) occur during execution when the code logic encounters a problem — dividing by zero, selecting no rows, null pointer errors. Runtime errors can be handled using EXCEPTION blocks. Syntax errors must be fixed in the source code before the block can compile.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- SYNTAX ERROR (compile-time) — won't even compile:
+-- BEGIN
+--   SELCT * FROM employees;    typo in SELECT
+--   x := 10                    missing semicolon
+-- END;
+-- Error: PLS-00103: Encountered symbol "*"
+
+-- RUNTIME ERROR (exception) — compiles but fails at runtime:
+DECLARE
+  v_result NUMBER;
+BEGIN
+  v_result := 100 / 0;        -- compiles OK, fails at runtime
+EXCEPTION
+  WHEN ZERO_DIVIDE THEN
+    DBMS_OUTPUT.PUT_LINE('Runtime error: division by zero');
+    DBMS_OUTPUT.PUT_LINE('Handled gracefully — execution continues');
+END;
+
+-- Check compile errors:
+SELECT line, position, text
+FROM   user_errors
+WHERE  name = 'MY_PROCEDURE'
+ORDER  BY sequence;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Syntax error: PLS-00103 at compile time — block cannot run</td></tr><tr><td class="">Runtime error: ORA-01476 ZERO_DIVIDE — caught by EXCEPTION</td></tr><tr><td class="">v_result: not assigned (exception fired before assignment)</td></tr><tr><td class="">Handled gracefully — execution continues after EXCEPTION block</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Syntax errors (compile-time errors) occur when the PL/SQL code has incorrect grammar — wrong keywords, missing semicolons, undeclared variables.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="advanced">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q175. What is a mutating table error in PL/SQL and how do you resolve it?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:rgba(45,100,70,0.08);color:#2d6446;border:1px solid rgba(45,100,70,0.2)">advanced</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">A mutating table error (ORA-04091) occurs when a row-level trigger tries to query or modify the same table that caused the trigger to fire. For example, an AFTER INSERT FOR EACH ROW trigger on EMPLOYEES that tries to SELECT COUNT(*) FROM EMPLOYEES will fail because the table is in a state of change (mutating). Solutions include: using a BEFORE statement-level trigger to capture data, using a compound trigger (available from Oracle 11g) to separate row and statement level logic, or using an autonomous transaction pragma.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- <i class="fas fa-times-circle" style="color:#b91c1c"></i> CAUSES ORA-04091 (mutating table)
+CREATE OR REPLACE TRIGGER trg_check_dept_count
+AFTER INSERT ON employees FOR EACH ROW
+BEGIN
+  DECLARE v_count NUMBER;
+  BEGIN
+    SELECT COUNT(*) INTO v_count  -- <i class="fas fa-times-circle" style="color:#b91c1c"></i> queries mutating table
+    FROM   employees WHERE department_id = :NEW.department_id;
+    IF v_count &gt; 10 THEN
+      RAISE_APPLICATION_ERROR(-20010, 'Dept has more than 10 employees');
+    END IF;
+  END;
+END;
+
+-- <i class="fas fa-check-circle" style="color:#276749"></i> FIX: Use COMPOUND TRIGGER
+CREATE OR REPLACE TRIGGER trg_check_dept_count_fixed
+FOR INSERT ON employees COMPOUND TRIGGER
+  v_dept_id NUMBER;
+  BEFORE EACH ROW IS BEGIN
+    v_dept_id := :NEW.department_id;
+  END BEFORE EACH ROW;
+  AFTER STATEMENT IS
+    v_count NUMBER;
+  BEGIN
+    SELECT COUNT(*) INTO v_count  -- <i class="fas fa-check-circle" style="color:#276749"></i> safe after all rows done
+    FROM   employees WHERE department_id = v_dept_id;
+    IF v_count &gt; 10 THEN
+      RAISE_APPLICATION_ERROR(-20010, 'Dept &gt; 10 employees');
+    END IF;
+  END AFTER STATEMENT;
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class=""><i class="fas fa-times-circle" style="color:#b91c1c"></i> ORA-04091: table EMPLOYEES is mutating</td></tr><tr><td class=""><i class="fas fa-check-circle" style="color:#276749"></i> Compound trigger separates row and statement processing</td></tr><tr><td class="">BEFORE EACH ROW: capture :NEW values safely</td></tr><tr><td class="">AFTER STATEMENT: query table after all row changes are done</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>A mutating table error (ORA-04091) occurs when a row-level trigger tries to query or modify the same table that caused the trigger to fire.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q176. What are the uses of the MERGE statement in Oracle SQL and PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">MERGE (also called UPSERT) combines INSERT and UPDATE in a single atomic statement. It compares a source data set against a target table using a ON condition. When a match is found it can UPDATE the target row. When no match is found it can INSERT a new row. Optionally, a WHEN NOT MATCHED BY SOURCE clause can DELETE rows from the target that have no corresponding source row. MERGE is ideal for ETL processes, data synchronisation, and maintaining summary/aggregate tables.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Merge new hire data into employees table
+MERGE INTO employees tgt
+USING (
+  SELECT 205 AS emp_id, 'Emma Wilson' AS emp_name,
+         10  AS dept_id, 55000 AS salary FROM DUAL
+  UNION ALL
+  SELECT 101, 'Alice Johnson Updated', 10, 60000 FROM DUAL
+) src
+ON (tgt.employee_id = src.emp_id)
+WHEN MATCHED THEN
+  UPDATE SET tgt.employee_name = src.emp_name,
+             tgt.salary        = src.salary,
+             tgt.updated_date  = SYSDATE
+WHEN NOT MATCHED THEN
+  INSERT (employee_id, employee_name, department_id, salary, hire_date)
+  VALUES (src.emp_id, src.emp_name, src.dept_id, src.salary, SYSDATE);
+
+COMMIT;
+SELECT employee_id, employee_name, salary FROM employees
+WHERE  employee_id IN (101, 205);</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">EMPLOYEE_ID  EMPLOYEE_NAME          SALARY</td></tr><tr><td class="">101          Alice Johnson Updated   60,000   UPDATED</td></tr><tr><td class="">205          Emma Wilson            55,000   INSERTED</td></tr><tr><td class="">2 rows merged — 1 updated, 1 inserted</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>MERGE (also called UPSERT) combines INSERT and UPDATE in a single atomic statement.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q177. What are DML, DDL, and TCL statements in Oracle?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">SQL statements are categorised by what they do. DML (Data Manipulation Language) manipulates existing data: SELECT, INSERT, UPDATE, DELETE, MERGE. DML is transactional — changes can be committed or rolled back. DDL (Data Definition Language) defines and modifies database structure: CREATE, ALTER, DROP, TRUNCATE, RENAME, COMMENT. DDL in Oracle issues an implicit COMMIT before and after execution — it cannot be rolled back. TCL (Transaction Control Language) manages transactions: COMMIT (save), ROLLBACK (undo), SAVEPOINT (partial rollback point).</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- DML: transactional, can be rolled back
+INSERT INTO employees(employee_id, employee_name, salary)
+VALUES(206, 'Test User', 45000);
+UPDATE employees SET salary = 50000 WHERE employee_id = 206;
+DELETE FROM employees WHERE employee_id = 206;
+
+-- TCL: control transactions
+SAVEPOINT before_update;
+UPDATE employees SET salary = 99999 WHERE department_id = 10;
+ROLLBACK TO before_update;  -- undo the update only
+COMMIT;                      -- commit everything before savepoint
+
+-- DDL: auto-commits, cannot be rolled back
+CREATE TABLE temp_data(id NUMBER, val VARCHAR2(100));
+ALTER  TABLE temp_data ADD active_flag CHAR(1) DEFAULT 'Y';
+DROP   TABLE temp_data;  -- implicit COMMIT, permanent</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">DML INSERT: pending — not yet committed</td></tr><tr><td class="">ROLLBACK TO before_update: UPDATE undone</td></tr><tr><td class="">COMMIT: all changes before savepoint permanently saved</td></tr><tr><td class="">DDL DROP TABLE: implicit COMMIT — cannot be rolled back</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>SQL statements are categorised by what they do.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q178. What are user-defined types and exceptions in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">User-defined exceptions are custom error conditions declared in the DECLARE section and raised with the RAISE statement. They allow meaningful business rule violations to be signalled without using cryptic Oracle error codes. User-defined types in PL/SQL include RECORD types (grouping fields like a struct), TABLE types (collections of records or scalars), VARRAY types (fixed-size arrays), and object types (OOP-style with attributes and methods). These are defined with TYPE...IS syntax and can be stored in the database schema for reuse.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">DECLARE
+  -- User-defined exception
+  ex_low_salary  EXCEPTION;
+  ex_bad_dept    EXCEPTION;
+
+  -- User-defined RECORD type
+  TYPE t_emp_rec IS RECORD (
+    emp_id   employees.employee_id%TYPE,
+    emp_name employees.employee_name%TYPE,
+    salary   employees.salary%TYPE
+  );
+  v_emp t_emp_rec;
+
+  -- User-defined TABLE type (collection)
+  TYPE t_id_list IS TABLE OF NUMBER INDEX BY PLS_INTEGER;
+  v_ids t_id_list;
+
+BEGIN
+  SELECT employee_id, employee_name, salary
+  INTO   v_emp.emp_id, v_emp.emp_name, v_emp.salary
+  FROM   employees WHERE employee_id = 101;
+
+  IF v_emp.salary &lt; 30000 THEN
+    RAISE ex_low_salary;
+  END IF;
+  DBMS_OUTPUT.PUT_LINE(v_emp.emp_name || ': ' || v_emp.salary);
+EXCEPTION
+  WHEN ex_low_salary THEN
+    DBMS_OUTPUT.PUT_LINE('Error: salary below minimum threshold');
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Alice Johnson: 50000 (salary >= 30000, no exception)</td></tr><tr><td class="">ex_low_salary would fire if salary < 30000</td></tr><tr><td class="">t_emp_rec: groups emp_id, emp_name, salary in one variable</td></tr><tr><td class="">t_id_list: collection of NUMBER values indexed by integer</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>User-defined exceptions are custom error conditions declared in the DECLARE section and raised with the RAISE statement.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q179. How do you return multiple rows from a PL/SQL function or block?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">There are three main ways to return multiple rows from PL/SQL. BULK COLLECT fetches all matching rows into a PL/SQL collection at once — very efficient. A REF CURSOR (SYS_REFCURSOR or user-defined) returns a cursor pointer that the caller can fetch from — commonly used with Java, .NET, and APEX applications. A Pipelined table function uses PIPE ROW to return rows one at a time as they are computed — best for large data sets and streaming results in SQL queries.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Method 1: BULK COLLECT into collection
+DECLARE
+  TYPE t_emps IS TABLE OF employees%ROWTYPE;
+  v_emps t_emps;
+BEGIN
+  SELECT * BULK COLLECT INTO v_emps
+  FROM   employees WHERE department_id = 10;
+  DBMS_OUTPUT.PUT_LINE('Fetched: ' || v_emps.COUNT || ' rows');
+  FOR i IN 1..v_emps.COUNT LOOP
+    DBMS_OUTPUT.PUT_LINE(v_emps(i).employee_name);
+  END LOOP;
+END;
+
+-- Method 2: SYS_REFCURSOR (OUT parameter)
+CREATE OR REPLACE PROCEDURE prc_get_dept_emps(
+  p_dept_id IN  NUMBER,
+  p_cursor  OUT SYS_REFCURSOR
+) IS
+BEGIN
+  OPEN p_cursor FOR
+    SELECT employee_id, employee_name, salary
+    FROM   employees WHERE department_id = p_dept_id;
+END;
+-- APEX: use as report source, Java: ResultSet = p_cursor</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">BULK COLLECT: Fetched 2 rows — Alice Johnson, Carol White</td></tr><tr><td class="">SYS_REFCURSOR: caller iterates cursor (Java ResultSet / APEX)</td></tr><tr><td class="">BULK COLLECT: all rows in memory — use LIMIT for large sets</td></tr><tr><td class="">PIPE ROW: streams rows — memory efficient for millions of rows</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>There are three main ways to return multiple rows from PL/SQL.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q180. What are anonymous blocks in PL/SQL and how do they differ from subprograms?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">Anonymous blocks are unnamed PL/SQL code blocks that are executed once and not stored in the database. They start with DECLARE (optional) or BEGIN and end with END. Because they are not stored, they cannot be called by name and are recompiled every time they run. Subprograms (procedures and functions) are named, compiled once, stored in the database (in USER_SOURCE / DBA_SOURCE), can be called repeatedly, can accept parameters, and have security privileges assigned to them. Anonymous blocks are used for one-off scripts, testing, and migration tasks.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Anonymous block: not stored, runs once
+DECLARE
+  v_count NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_count FROM employees;
+  DBMS_OUTPUT.PUT_LINE('Employee count: ' || v_count);
+  -- This block is gone after execution
+END;
+/
+
+-- Subprogram: stored, reusable, callable by name
+CREATE OR REPLACE PROCEDURE prc_show_count IS
+  v_count NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_count FROM employees;
+  DBMS_OUTPUT.PUT_LINE('Employee count: ' || v_count);
+END;
+/
+-- Stored in: SELECT * FROM user_source WHERE name='PRC_SHOW_COUNT'
+-- Call anytime: EXEC prc_show_count;
+-- Grant to others: GRANT EXECUTE ON prc_show_count TO hr_user;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Anonymous block: Employee count: 4 (runs once, not stored)</td></tr><tr><td class="">Stored procedure: saved in USER_SOURCE — callable anytime</td></tr><tr><td class="">EXEC prc_show_count  Employee count: 4</td></tr><tr><td class="">GRANT EXECUTE ON prc_show_count TO hr_user  permission granted</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Anonymous blocks are unnamed PL/SQL code blocks that are executed once and not stored in the database.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q181. What are package specifications in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">A package specification (spec) is the public interface of a PL/SQL package — it declares what is visible to the outside world. It contains declarations of public procedures, functions, types, variables, constants, cursors, and exceptions. The spec does not contain any implementation code — that lives in the package body. Users and applications can call only what is declared in the spec. Items declared only in the body are private. The spec compiles independently and can be compiled without the body.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Package SPEC: public interface
+CREATE OR REPLACE PACKAGE pkg_employee AS
+  -- Public constant
+  c_max_salary CONSTANT NUMBER := 500000;
+
+  -- Public type
+  TYPE t_emp_rec IS RECORD(
+    emp_id   NUMBER,
+    emp_name VARCHAR2(100),
+    salary   NUMBER
+  );
+
+  -- Public cursor
+  CURSOR c_all_emps RETURN employees%ROWTYPE;
+
+  -- Public procedures/functions (signatures only)
+  PROCEDURE prc_raise_salary(p_emp_id IN NUMBER, p_pct IN NUMBER DEFAULT 10);
+  FUNCTION  fn_get_salary(p_emp_id IN NUMBER) RETURN NUMBER;
+  PROCEDURE prc_log_audit(p_action IN VARCHAR2);
+
+END pkg_employee;
+/
+-- Usage:
+-- pkg_employee.prc_raise_salary(101, 15);
+-- v_sal := pkg_employee.fn_get_salary(101);
+-- DBMS_OUTPUT.PUT_LINE(pkg_employee.c_max_salary);</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Package spec compiled successfully</td></tr><tr><td class="">Public interface exposed: 2 procedures, 1 function, 1 constant</td></tr><tr><td class="">Body can be replaced without recompiling dependents on spec</td></tr><tr><td class="">pkg_employee.fn_get_salary(101)  50000</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>A package specification (spec) is the public interface of a PL/SQL package — it declares what is visible to the outside world.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q182. Does SQL*Plus have a PL/SQL engine?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">No, SQL*Plus does not have its own PL/SQL engine. When you submit a PL/SQL block in SQL*Plus, it is sent entirely to the Oracle Database Server where the server-side PL/SQL engine compiles and executes it. SQL*Plus itself only handles the submission and display of results. This is different from Oracle Forms or Oracle Reports which have their own client-side PL/SQL engines. The implication is that all PL/SQL code in SQL*Plus requires a database connection and runs on the server.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- SQL*Plus submits entire block to DB server
+-- SQL*Plus itself only handles:
+--   1. Sending the block to Oracle server
+--   2. Displaying DBMS_OUTPUT (with SET SERVEROUTPUT ON)
+--   3. Substitution variables (&amp;var)
+
+-- Example: this block runs on the SERVER, not in SQL*Plus
+SET SERVEROUTPUT ON
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Running on: ' ||
+    SYS_CONTEXT('USERENV','SERVER_HOST'));
+  DBMS_OUTPUT.PUT_LINE('DB version: ' ||
+    SUBSTR(DBMS_DB_VERSION.VERSION,1,2));
+END;
+/
+
+-- SQL*Plus features (client-side):
+-- SPOOL output.txt    client file write
+-- @script.sql         client file execute
+-- &amp;substitution       client-side variable</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Running on: db-server-01</td></tr><tr><td class="">DB version: 19</td></tr><tr><td class="">SQL*Plus: no PL/SQL engine — sends block to DB server</td></tr><tr><td class="">SET SERVEROUTPUT ON: required to see DBMS_OUTPUT results</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>No, SQL*Plus does not have its own PL/SQL engine.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="basic">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q183. What is BTITLE and TTITLE in SQL*Plus?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7">basic</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">TTITLE and BTITLE are SQL*Plus formatting commands for report headers and footers. TTITLE (Top Title) sets a title that appears at the top of every page in a spooled report. BTITLE (Bottom Title) sets a footer that appears at the bottom of every page. They support page numbers (SQL.PNO), date/time, and custom text. They are typically used with SPOOL to produce formatted report files. Modern Oracle applications use APEX or BI Publisher for reporting, but SQL*Plus reports are still used for DBA scripts and scheduled exports.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- SQL*Plus report formatting
+SET PAGESIZE    50
+SET LINESIZE   120
+SET SERVEROUTPUT ON
+
+-- Top title (appears at top of every page)
+TTITLE CENTER 'EMANO GmbH — Employee Salary Report' SKIP 1 -
+       RIGHT 'Page: ' FORMAT 999 SQL.PNO SKIP 2
+
+-- Bottom title (appears at bottom of every page)
+BTITLE LEFT 'Confidential — HR Department' -
+       RIGHT 'Generated: ' _DATE
+
+-- Column formatting
+COLUMN employee_name FORMAT A25  HEADING 'Employee Name'
+COLUMN salary        FORMAT 999,999  HEADING 'Salary'
+COLUMN department_id FORMAT 99   HEADING 'Dept'
+
+-- Spool to file and run query
+SPOOL salary_report.txt
+SELECT employee_name, salary, department_id
+FROM   employees ORDER BY department_id, salary DESC;
+SPOOL OFF
+TTITLE OFF
+BTITLE OFF</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">         EMANO GmbH — Employee Salary Report    Page:   1</td></tr><tr><td class="">Employee Name             Salary  Dept</td></tr><tr><td class="">Alice Johnson             50,000    10</td></tr><tr><td class="">Carol White               55,000    10</td></tr><tr><td class="">           Confidential — HR Department  Generated: 27-APR-26</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>TTITLE and BTITLE are SQL*Plus formatting commands for report headers and footers.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="advanced">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q184. What is the role of the PL/SQL Hierarchical Profiler?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:rgba(45,100,70,0.08);color:#2d6446;border:1px solid rgba(45,100,70,0.2)">advanced</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">The PL/SQL Hierarchical Profiler (DBMS_HPROF) analyses the execution time of PL/SQL programs at the subprogram (function/procedure) level, showing how long each call took, how many times it was called, and in what calling hierarchy. Unlike DBMS_PROFILER (line-level), DBMS_HPROF gives a function-call-tree view making it easier to identify expensive bottlenecks. The output is stored in database tables and can be analysed with the supplied PLSHPROF utility or Oracle SQL Developer.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Step 1: Grant and create tables (DBA does once)
+-- GRANT EXECUTE ON DBMS_HPROF TO HR;
+-- @$ORACLE_HOME/rdbms/admin/dbmshptab.sql
+
+-- Step 2: Start profiling
+BEGIN
+  DBMS_HPROF.START_PROFILING(
+    location =&gt; 'PROFILE_DIR',  -- Oracle DIRECTORY object
+    filename  =&gt; 'my_profile.trc'
+  );
+END;
+/
+
+-- Step 3: Run the code to profile
+BEGIN
+  prc_generate_monthly_report(p_month =&gt; '2026-04');
+END;
+/
+
+-- Step 4: Stop profiling
+BEGIN
+  DBMS_HPROF.STOP_PROFILING;
+END;
+/
+
+-- Step 5: Analyse (load into tables)
+SELECT DBMS_HPROF.ANALYZE(
+  location =&gt; 'PROFILE_DIR',
+  filename  =&gt; 'my_profile.trc'
+) AS run_id FROM DUAL;
+
+-- Step 6: Query results
+SELECT owner, module, function, calls, elapsed_time
+FROM   dbmshp_function_info WHERE runid = 1
+ORDER  BY elapsed_time DESC;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">FUNCTION                    CALLS  ELAPSED_TIME</td></tr><tr><td class="">prc_generate_monthly_report  1     8,432,100 µs</td></tr><tr><td class="">fn_calc_bonuses              1200  3,201,400 µs</td></tr><tr><td class="">pkg_report.prc_format_row    12000 2,100,000 µs</td></tr><tr><td class="">fn_calc_bonuses: bottleneck — 38% of total time</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The PL/SQL Hierarchical Profiler (DBMS_HPROF) analyses the execution time of PL/SQL programs at the subprogram (function/procedure) level, showing how long each call took, how many times it was called, and in what calling hierarchy.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="advanced">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q185. What is the difference between PGA and SGA in Oracle Database?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:rgba(45,100,70,0.08);color:#2d6446;border:1px solid rgba(45,100,70,0.2)">advanced</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">SGA (System Global Area) is shared memory allocated when the Oracle instance starts, shared by all sessions and processes. It contains the Buffer Cache (data blocks), Shared Pool (library cache for parsed SQL/PL/SQL, data dictionary cache), Redo Log Buffer, and Large/Java/Streams Pools. PGA (Program Global Area) is private memory allocated for each individual server process/session. It contains the session's sort area, hash area, cursor state, and session variables. PGA is not shared — each session has its own PGA. When a session ends, its PGA is freed.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Check SGA size and components
+SELECT name, ROUND(bytes/1024/1024, 1) AS size_mb
+FROM   v$sgainfo
+ORDER  BY bytes DESC;
+
+-- Check PGA usage per session
+SELECT s.sid, s.username, s.program,
+       ROUND(p.pga_alloc_mem/1024/1024, 2) AS pga_mb,
+       ROUND(p.pga_max_mem/1024/1024,   2) AS pga_max_mb
+FROM   v$session s JOIN v$process p ON s.paddr = p.addr
+WHERE  s.username IS NOT NULL
+ORDER  BY pga_alloc_mem DESC;
+
+-- PGA target (auto-managed)
+SELECT name, value FROM v$parameter
+WHERE  name IN ('pga_aggregate_target','sga_target','memory_target');</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">SGA: Buffer Cache 800MB, Shared Pool 400MB, Redo Buffer 64MB</td></tr><tr><td class="">PGA per session: THARUN.K  12.5 MB current, 18.0 MB peak</td></tr><tr><td class="">SGA: shared by all — survives session end</td></tr><tr><td class="">PGA: private per session — freed when session disconnects</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>SGA (System Global Area) is shared memory allocated when the Oracle instance starts, shared by all sessions and processes.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="advanced">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q186. What is polymorphism in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:rgba(45,100,70,0.08);color:#2d6446;border:1px solid rgba(45,100,70,0.2)">advanced</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">Polymorphism in PL/SQL is implemented through subprogram overloading — defining multiple procedures or functions with the same name but different parameter signatures (different number, types, or order of parameters). Oracle resolves which version to call based on the actual parameters passed. Overloading is only allowed within a package (not standalone procedures). It improves API usability by allowing one logical operation to work with different data types without requiring the caller to use different names.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">CREATE OR REPLACE PACKAGE pkg_format AS
+  -- Overloaded functions — same name, different signatures
+
+  -- Format a NUMBER
+  FUNCTION fmt(p_val IN NUMBER) RETURN VARCHAR2;
+
+  -- Format a DATE
+  FUNCTION fmt(p_val IN DATE) RETURN VARCHAR2;
+
+  -- Format a VARCHAR2
+  FUNCTION fmt(p_val IN VARCHAR2, p_upper IN BOOLEAN DEFAULT FALSE) RETURN VARCHAR2;
+
+END pkg_format;
+/
+
+CREATE OR REPLACE PACKAGE BODY pkg_format AS
+  FUNCTION fmt(p_val IN NUMBER) RETURN VARCHAR2 IS
+  BEGIN RETURN TO_CHAR(p_val, '999,999.99'); END;
+
+  FUNCTION fmt(p_val IN DATE) RETURN VARCHAR2 IS
+  BEGIN RETURN TO_CHAR(p_val, 'DD-MON-YYYY HH24:MI'); END;
+
+  FUNCTION fmt(p_val IN VARCHAR2, p_upper IN BOOLEAN DEFAULT FALSE) RETURN VARCHAR2 IS
+  BEGIN
+    RETURN CASE WHEN p_upper THEN UPPER(p_val) ELSE INITCAP(p_val) END;
+  END;
+END pkg_format;
+/
+-- Usage:
+-- pkg_format.fmt(50000)       '50,000.00'
+-- pkg_format.fmt(SYSDATE)     '27-APR-2026 14:30'
+-- pkg_format.fmt('alice',TRUE)  'ALICE'</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">pkg_format.fmt(50000)          '  50,000.00'</td></tr><tr><td class="">pkg_format.fmt(SYSDATE)        '27-APR-2026 14:30'</td></tr><tr><td class="">pkg_format.fmt('hello', TRUE)  'HELLO'</td></tr><tr><td class="">Oracle resolves correct version by parameter types at compile time</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>Polymorphism in PL/SQL is implemented through subprogram overloading — defining multiple procedures or functions with the same name but different parameter signatures (different number, types, or order of parameters).</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="advanced">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q187. What is the TABLE() function used for in PL/SQL?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:rgba(45,100,70,0.08);color:#2d6446;border:1px solid rgba(45,100,70,0.2)">advanced</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">The TABLE() function converts a PL/SQL collection (nested table or VARRAY) into a relational result set that can be used in SQL queries — effectively treating the collection like a table. This allows you to JOIN a PL/SQL collection with real tables, use it in WHERE IN clauses, and use it as a FROM clause source. The collection type must be defined at the schema level (CREATE TYPE), not just inside a PL/SQL block, for TABLE() to work in SQL context.</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">-- Step 1: Create schema-level type
+CREATE OR REPLACE TYPE t_number_list AS TABLE OF NUMBER;
+/
+
+CREATE OR REPLACE TYPE t_emp_row AS OBJECT(
+  emp_id NUMBER, emp_name VARCHAR2(100), salary NUMBER
+);
+/
+CREATE OR REPLACE TYPE t_emp_list AS TABLE OF t_emp_row;
+/
+
+-- Step 2: Use TABLE() in SQL
+DECLARE
+  v_ids   t_number_list := t_number_list(101, 103);
+BEGIN
+  -- Query employees whose IDs are in the collection
+  FOR r IN (
+    SELECT e.employee_name, e.salary
+    FROM   employees e
+    JOIN   TABLE(v_ids) t ON e.employee_id = t.COLUMN_VALUE
+  ) LOOP
+    DBMS_OUTPUT.PUT_LINE(r.employee_name || ': ' || r.salary);
+  END LOOP;
+END;
+/
+
+-- TABLE() in SELECT (pipelined function result)
+SELECT * FROM TABLE(pkg_report.fn_get_dept_data(10));</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Alice Johnson: 50,000</td></tr><tr><td class="">Carol White: 55,000</td></tr><tr><td class="">TABLE(): converts collection to virtual table in SQL</td></tr><tr><td class="">JOIN TABLE(v_ids): filter employees by collection of IDs</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The TABLE() function converts a PL/SQL collection (nested table or VARRAY) into a relational result set that can be used in SQL queries — effectively treating the collection like a table.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="question-container" data-difficulty="intermediate">
+  <div class="question-header" role="button" tabindex="0" aria-expanded="false">
+    <div class="question-text">Q188. What is an active set in PL/SQL cursor terminology?</div>
+    <div class="question-details">
+      <span class="difficulty-badge" style="background:#fef9c3;color:#713f12;border:1px solid #fde68a">intermediate</span>
+      <div class="question-toggle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </div>
+  <div class="question-content" style="display:none;" aria-hidden="true">
+    <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon ans"><i class="fas fa-lightbulb"></i></div><span class="rich-lbl">Answer</span></div><div class="rich-s-body" style="padding:16px 18px"><p class="ans-txt">The active set is the set of rows that satisfy the WHERE condition of a cursor's SELECT statement at the time the cursor is opened. When you OPEN a cursor, Oracle executes the query and identifies all the qualifying rows — this complete set of rows is called the active set. The cursor then maintains a pointer that moves through the active set as you FETCH rows one by one. The active set is determined at OPEN time, so changes made to the underlying table after OPEN do not affect what the cursor returns (due to Oracle's read consistency via MVCC).</p></div></div>
+    <button class="details-toggle-btn" onclick="toggleDetails(this)">
+      <span class="toggle-icon">+</span>&nbsp;Show Code &amp; Details
+    </button>
+    <div class="details-body">
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon code"><i class="fas fa-code"></i></div><span class="rich-lbl">Code</span><span class="rich-sub">PL/SQL</span></div><div class="rich-s-body" style="padding:0"><div class="rich-code-blk"><div class="rich-code-bar"><span class="rich-lang-tag">PL/SQL</span><button class="rich-cp-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div><pre><code class="language-sql">DECLARE
+  -- This query defines the potential active set
+  CURSOR c_high_earners IS
+    SELECT employee_id, employee_name, salary
+    FROM   employees
+    WHERE  salary &gt; 55000   -- only qualifying rows form active set
+    ORDER  BY salary DESC;
+
+  v_emp c_high_earners%ROWTYPE;
+BEGIN
+  OPEN c_high_earners;  -- Active set LOCKED here
+  -- Active set: Bob Smith(62,000), Dave Brown(70,000)
+  -- Even if another session inserts a new high earner NOW,
+  -- this cursor will NOT see it (read consistency)
+
+  LOOP
+    FETCH c_high_earners INTO v_emp;  -- moves pointer through active set
+    EXIT WHEN c_high_earners%NOTFOUND;
+    DBMS_OUTPUT.PUT_LINE(
+      'Rank ' || c_high_earners%ROWCOUNT || ': ' ||
+      v_emp.employee_name || ' - ' || v_emp.salary
+    );
+  END LOOP;
+  CLOSE c_high_earners;
+END;</code></pre></div></div></div>
+      <div class="rich-section"><div class="rich-s-hdr"><div class="rich-icon res"><i class="fas fa-circle-check"></i></div><span class="rich-lbl">Output / After</span><span class="rich-sub">result</span></div><div class="rich-s-body" style="padding:16px 18px"><div class="state-pill after"><i class="fas fa-circle-check"></i> After</div><div class="rich-tbl-wrap" style="margin-top:10px"><table class="rich-tbl"><thead><tr><th>OUTPUT / RESULT</th></tr></thead><tbody><tr><td class="">Rank 1: Dave Brown - 70,000</td></tr><tr><td class="">Rank 2: Bob Smith - 62,000</td></tr><tr><td class="">Active set: 2 rows (salary > 55,000 when cursor opened)</td></tr><tr><td class="">Alice Johnson(50,000) and Carol White(55,000) excluded by WHERE</td></tr></tbody></table></div></div></div>
+      <div class="rich-takeaway"><div class="rich-tk-icon"><i class="fas fa-bolt"></i></div><div class="rich-tk-body"><h4>Key Takeaway</h4><p>The active set is the set of rows that satisfy the WHERE condition of a cursor's SELECT statement at the time the cursor is opened.</p></div></div>
+    </div>
+  </div>
+</div>
+
+
+
   
 
 
@@ -6576,7 +7780,7 @@ END;
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2025 APEX Interview Mastery. All rights reserved.</span>
+      <span class="footer-copy"> 2025 APEX Interview Mastery. All rights reserved.</span>
       <span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span>
     </div>
   </footer>

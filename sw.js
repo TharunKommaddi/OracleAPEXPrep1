@@ -1,7 +1,7 @@
 // Oracle APEX Interview Prep - Service Worker
 // Version: 1.0.0
 
-const CACHE_NAME = 'apex-prep-v1';
+const CACHE_NAME = 'apex-prep-v2';
 const STATIC_CACHE = 'apex-prep-static-v1';
 
 // Core files to cache on install

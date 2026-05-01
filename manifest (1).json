@@ -1,0 +1,94 @@
+{
+  "name": "Oracle APEX Interview Prep",
+  "short_name": "APEX Prep",
+  "description": "Complete Oracle APEX interview preparation — SQL, PL/SQL, APEX, HTML, CSS, JavaScript, jQuery with quizzes and PDF viewer.",
+  "start_url": "/OracleAPEXPrep1/index.html",
+  "scope": "/OracleAPEXPrep1/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#F80000",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "SQL Questions",
+      "short_name": "SQL",
+      "description": "Oracle SQL interview questions",
+      "url": "/OracleAPEXPrep1/index.html#sql",
+      "icons": [{ "src": "icons/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "PL/SQL Questions",
+      "short_name": "PL/SQL",
+      "description": "PL/SQL interview questions",
+      "url": "/OracleAPEXPrep1/index.html#plsql",
+      "icons": [{ "src": "icons/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "APEX Questions",
+      "short_name": "APEX",
+      "description": "Oracle APEX interview questions",
+      "url": "/OracleAPEXPrep1/index.html#apex",
+      "icons": [{ "src": "icons/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Quiz Hub",
+      "short_name": "Quiz",
+      "description": "Test your knowledge with quizzes",
+      "url": "/OracleAPEXPrep1/index.html#quiz",
+      "icons": [{ "src": "icons/icon-96x96.png", "sizes": "96x96" }]
+    }
+  ]
+}

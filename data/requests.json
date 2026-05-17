@@ -1,1 +1,23 @@
-[]
+[
+
+
+
+  {
+  "email": "aurelia.spatz@gmail.com",
+  "fullName": "Aurelia Spatz",
+  "accessType": "developer",
+  "password": "TempPass123!",
+  "approvedAt": "2026-05-17T08:51:39.428Z",
+  "requestId": "REQ-MP9J7TOZ"
+  },
+
+
+  {
+  "email": "aurelia.spatz@gmail.com",
+  "fullName": "Aurelia Spatz",
+  "accessType": "developer",
+  "password": "TempPass123!",
+  "approvedAt": "2026-05-17T08:52:43.091Z",
+  "requestId": "REQ-MP9JEPJN"
+  }
+]

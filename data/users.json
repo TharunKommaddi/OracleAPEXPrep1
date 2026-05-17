@@ -32,6 +32,16 @@
   "password": "TempPass123!",
   "approvedAt": "2026-05-06T17:52:40.401Z",
   "requestId": "REQ-MOUCUQ4U"
+  },
+
+
+  {
+  "email": "aurelia.spatz@gmail.com",
+  "fullName": "Aurelia Spatz",
+  "accessType": "developer",
+  "password": "TempPass123!",
+  "approvedAt": "2026-05-17T08:47:23.788Z",
+  "requestId": "REQ-MP9J7TOZ"
   }
 
   

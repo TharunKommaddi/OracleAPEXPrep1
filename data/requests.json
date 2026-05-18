@@ -19,5 +19,14 @@
   "password": "TempPass123!",
   "approvedAt": "2026-05-17T08:52:43.091Z",
   "requestId": "REQ-MP9JEPJN"
+  },
+
+  {
+  "email": "thomas.tschernich@gmail.com",
+  "fullName": "Tgg",
+  "accessType": "developer",
+  "password": "TempPass123!",
+  "approvedAt": "2026-05-18T09:16:14.923Z",
+  "requestId": "REQ-MPAZOTL7"
   }
 ]

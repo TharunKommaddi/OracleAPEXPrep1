@@ -1387,6 +1387,9 @@ function showPage(page){
   document.querySelectorAll('.nav-links a[data-page]').forEach(a=>{
     a.classList.toggle('active', a.dataset.page===page);
   });
+  /* Hide nav on login page, show on all others */
+  const nav = document.getElementById('mainNav');
+  if(nav) nav.style.display = page === 'login' ? 'none' : 'flex';
   history.pushState({page}, '', '#'+page);
 }
 

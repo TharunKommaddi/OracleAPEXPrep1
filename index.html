@@ -1880,19 +1880,14 @@ function hideAlert(el){ if(el){ el.className='alert'; el.innerHTML=''; } }
 /* Toggle email sign in form */
 function toggleEmailSignIn(){
   const form = document.getElementById('email-signin-form');
-  const icon = document.getElementById('email-signin-chevron');
-  const show = form.style.display === 'none';
-  form.style.display = show ? 'block' : 'none';
-  icon.style.transform = show ? 'rotate(180deg)' : 'rotate(0deg)';
+  if(!form) return;
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
 }
 
-/* Toggle email sign up form */
 function toggleEmailSignUp(){
   const form = document.getElementById('email-signup-form');
-  const icon = document.getElementById('email-signup-chevron');
-  const show = form.style.display === 'none';
-  form.style.display = show ? 'block' : 'none';
-  icon.style.transform = show ? 'rotate(180deg)' : 'rotate(0deg)';
+  if(!form) return;
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
 }
 
 /* Google Sign Up — triggers Google one-tap */
@@ -1955,8 +1950,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   /* Handle OAuth redirect from APK */
   handleOAuthRedirect();
   initGoogleSignIn();
-  /* Also init after a short delay in case GSI script loads late */
-  setTimeout(initGoogleSignIn, 1500);
+  /* Init after delay only if not already initialized */
+  setTimeout(()=>{
+    const signinEl = document.getElementById('google-signin-btn');
+    if(signinEl && !signinEl.querySelector('iframe')) initGoogleSignIn();
+  }, 1500);
   /* Always start at login if not logged in */
   if(!isLoggedIn()){
     showPage('login');

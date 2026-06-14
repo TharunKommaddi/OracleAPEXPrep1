@@ -235,7 +235,9 @@ a{text-decoration:none;color:inherit;}
 .pdf-spinner{width:48px;height:48px;border:4px solid var(--border-soft);border-top:4px solid var(--accent);border-radius:50%;animation:spin .8s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .pdf-loading p{font-size:14px;color:var(--text-muted);font-weight:300;}
-.pdf-iframe{width:100%;height:680px;border:none;display:none;background:#f8f8f8;}
+.pdf-iframe{width:100%;height:680px;border:none;display:none;background:#f8f8f8;touch-action:auto;-ms-touch-action:auto;}
+
+  
 .pdf-iframe.show{display:block;}
 .pdf-error{height:680px;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px;gap:16px;}
 .pdf-error.show{display:flex;}
@@ -350,9 +352,11 @@ a{text-decoration:none;color:inherit;}
     </div>
 
     <!-- iFrame -->
-    <iframe class="pdf-iframe" id="pdfFrame"
-      allow="fullscreen"
-      sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-top-navigation"></iframe>
+<iframe class="pdf-iframe" id="pdfFrame"
+  allow="fullscreen"
+  allowfullscreen
+  sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-top-navigation allow-pointer-lock"
+  style="touch-action:auto;-ms-touch-action:auto;">
 
     <!-- Error -->
     <div class="pdf-error" id="stateError">

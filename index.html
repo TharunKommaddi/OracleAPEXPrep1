@@ -48,7 +48,7 @@
   <div class="nav-actions" id="navActions">
     <!-- Injected by JS based on auth state -->
   </div>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" onclick="toggleIndexMobileNav()">
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" onclick="toggleIndexMobileNav(event)">
     <span></span><span></span>
   </button>
 </nav>
@@ -229,7 +229,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2025–2026 APEX Interview Mastery. All rights reserved.</span>
+      <span class="footer-copy">© 2026 APEX Interview Mastery. All rights reserved.</span>
       <span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span>
     </div>
   </footer>
@@ -495,7 +495,7 @@
     </div>
   </section>
   <footer class="footer">
-    <div class="footer-bottom"><span class="footer-copy">© 2025 APEX Interview Mastery. All rights reserved.</span><span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span></div>
+    <div class="footer-bottom"><span class="footer-copy">© 2026 APEX Interview Mastery. All rights reserved.</span><span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span></div>
   </footer>
 </div>
 
@@ -586,7 +586,7 @@
     </div>
   </section>
   <footer class="footer">
-    <div class="footer-bottom"><span class="footer-copy">© 2025 APEX Interview Mastery. All rights reserved.</span><span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span></div>
+    <div class="footer-bottom"><span class="footer-copy">© 2026 APEX Interview Mastery. All rights reserved.</span><span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span></div>
   </footer>
 </div>
 
@@ -1448,7 +1448,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }, 5*60*1000);
 });
 /* ── MOBILE NAV ── */
-function toggleIndexMobileNav(){
+function toggleIndexMobileNav(e){ if(e) e.stopPropagation();
   const drawer = document.getElementById('mobileDrawer');
   const burger = document.getElementById('navHamburger');
   if(!drawer||!burger) return;

@@ -79,24 +79,47 @@
 </div>
 
 <script>
+var _hamburgerOpen = false;
+
 function toggleHamburger(){
-  var d=document.getElementById('mobileDrawer'),b=document.getElementById('navHamburger');
-  if(!d||!b)return;
-  var o=d.classList.contains('open');
-  d.classList.toggle('open',!o);b.classList.toggle('open',!o);
-  document.body.style.overflow=o?'':'hidden';
+  _hamburgerOpen = !_hamburgerOpen;
+  var d = document.getElementById('mobileDrawer');
+  var b = document.getElementById('navHamburger');
+  if(!d || !b) return;
+  if(_hamburgerOpen){
+    d.style.display = 'block';
+    setTimeout(function(){ d.classList.add('open'); }, 10);
+    b.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  } else {
+    d.classList.remove('open');
+    b.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(function(){ if(!_hamburgerOpen) d.style.display = ''; }, 300);
+  }
 }
+
 function closeHamburger(){
-  var d=document.getElementById('mobileDrawer'),b=document.getElementById('navHamburger');
-  if(d)d.classList.remove('open');if(b)b.classList.remove('open');
-  document.body.style.overflow='';
+  _hamburgerOpen = false;
+  var d = document.getElementById('mobileDrawer');
+  var b = document.getElementById('navHamburger');
+  if(d){ d.classList.remove('open'); setTimeout(function(){ d.style.display=''; }, 300); }
+  if(b) b.classList.remove('open');
+  document.body.style.overflow = '';
 }
-document.addEventListener('click',function(e){
-  var d=document.getElementById('mobileDrawer'),b=document.getElementById('navHamburger');
-  if(!d||!b)return;
-  if(d.classList.contains('open')&&!d.contains(e.target)&&!b.contains(e.target))closeHamburger();
+
+document.addEventListener('click', function(e){
+  var d = document.getElementById('mobileDrawer');
+  var b = document.getElementById('navHamburger');
+  if(!d || !b || !_hamburgerOpen) return;
+  if(!d.contains(e.target) && !b.contains(e.target)){
+    closeHamburger();
+  }
 });
-window.addEventListener('resize',function(){if(window.innerWidth>768)closeHamburger();});
+
+window.addEventListener('resize', function(){
+  if(window.innerWidth > 768) closeHamburger();
+});
 function updateMobileUserDrawer(){
   var loggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
   var userName = sessionStorage.getItem('username') || sessionStorage.getItem('userEmail') || '';
@@ -466,7 +489,7 @@ apex.server.process('GET_EMPLOYEE', { x01: empId }, {
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2025–2026 APEX Interview Mastery. All rights reserved.</span>
+      <span class="footer-copy">© 2026 APEX Interview Mastery. All rights reserved.</span>
       <span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span>
     </div>
   </footer>

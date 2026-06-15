@@ -192,7 +192,8 @@ document.addEventListener('DOMContentLoaded', function() {
   PDFApp.init();
 });
 
-function toggleHamburger(){
+function toggleHamburger(e){
+  if(e) e.stopPropagation();
   var d=document.getElementById('mobileDrawer'),b=document.getElementById('navHamburger');
   if(!d||!b)return;
   var o=d.classList.contains('open');

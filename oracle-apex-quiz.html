@@ -38,7 +38,7 @@
     <a href="index.html" class="btn-nav-ghost">Sign In</a>
     <a href="index.html" class="btn-nav-primary"><i class="fas fa-rocket"></i> Get Access</a>
   </div>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" onclick="toggleMobileNavQuiz()">
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" onclick="toggleMobileNavQuiz(event)">
     <span></span><span></span>
   </button>
 </nav>
@@ -2000,14 +2000,15 @@ function restart() {
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2025–2026 APEX Interview Mastery. All rights reserved.</span>
+      <span class="footer-copy">© 2026 APEX Interview Mastery. All rights reserved.</span>
       <span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span>
     </div>
   </footer>
 
 
 <script>
-function toggleMobileNavQuiz(){
+function toggleMobileNavQuiz(e){
+  if(e) e.stopPropagation();
   var drawer=document.getElementById('mobileDrawer');
   var burger=document.getElementById('navHamburger');
   if(!drawer||!burger)return;

@@ -75,6 +75,11 @@
     <li><a onclick="navigate('contact');closeIndexMobileNav()"><i class="fas fa-envelope"></i> Contact</a></li>
     <li><a onclick="navigate('admin');closeIndexMobileNav()"><i class="fas fa-user-shield"></i> Admin</a></li>
   </ul>
+
+  <!-- User info shown when logged in — injected by updateMobileDrawer() -->
+  <div id="mobileUserSection"></div>
+
+  <!-- Shown when NOT logged in -->
   <div class="nav-mobile-actions" id="mobileNavActions">
     <button class="nav-mobile-btn ghost" onclick="navigate('login');closeIndexMobileNav()">
       <i class="fas fa-sign-in-alt"></i> Sign In
@@ -89,17 +94,6 @@
      PAGE 1 — HOME
 ═══════════════════════════════════════════════ -->
 <div class="page" id="page-home">
-
-  <!-- USER BAR — shown on mobile since nav is hidden -->
-  <div id="home-user-bar" style="display:none;background:var(--bg-surface);border-bottom:1px solid var(--border-soft);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px">
-    <div style="display:flex;align-items:center;gap:8px">
-      <i class="fas fa-user-circle" style="color:var(--accent);font-size:18px"></i>
-      <span id="home-user-name" style="font-size:13px;font-weight:600;color:var(--text-primary)"></span>
-    </div>
-    <button onclick="doLogout()" style="display:flex;align-items:center;gap:6px;background:var(--danger-pale);color:var(--danger);border:1px solid rgba(192,57,43,0.2);padding:6px 14px;border-radius:var(--r-sm);font-size:13px;font-weight:600;cursor:pointer">
-      <i class="fas fa-sign-out-alt"></i> Logout
-    </button>
-  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -866,40 +860,61 @@ window.addEventListener('popstate', e=>{
 ═══════════════════════════════════ */
 function updateNavActions(){
   const wrap = document.getElementById('navActions');
+  const mobileUserSection = document.getElementById('mobileUserSection');
+  const mobileNavActions  = document.getElementById('mobileNavActions');
   if(!wrap) return;
 
-  /* Update home user bar */
-  const bar      = document.getElementById('home-user-bar');
-  const nameEl   = document.getElementById('home-user-name');
-  if(bar && nameEl){
-    if(isLoggedIn()){
-      bar.style.display = 'flex';
-      nameEl.textContent = getCurrentUser();
-    } else {
-      bar.style.display = 'none';
-    }
-  }
-
   if(isLoggedIn()){
-    const name = getCurrentUser().split(' ')[0] || getCurrentEmail();
-    const role = getRole();
+    const name  = getCurrentUser().split(' ')[0] || getCurrentEmail();
+    const role  = getRole();
+    const full  = getCurrentUser();
+    const initial = full.charAt(0).toUpperCase();
     const adminLink = role==='admin' ? `<div class="user-dropdown-link" onclick="navigate('admin')"><i class="fas fa-user-shield"></i> Admin Dashboard</div>` : '';
+
+    // ── Desktop nav ──
     wrap.innerHTML = `
       <div class="user-menu-wrap">
         <button class="user-btn"><i class="fas fa-user"></i> ${name} <i class="fas fa-chevron-down" style="font-size:11px"></i></button>
         <div class="user-dropdown">
           <div class="user-info-item">
-            <div class="user-info-name">${getCurrentUser()}</div>
+            <div class="user-info-name">${full}</div>
             <div class="user-info-role">${role} access</div>
           </div>
           ${adminLink}
           <button class="user-dropdown-link danger" onclick="doLogout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
         </div>
       </div>`;
+
+    // ── Mobile drawer — user info + logout ──
+    if(mobileUserSection){
+      mobileUserSection.innerHTML = `
+        <div style="padding-top:12px">
+          <div class="nav-mobile-divider" style="margin-bottom:12px"></div>
+          <div class="nav-mobile-section-label" style="padding:0 0 8px 0">Account</div>
+          <div class="nav-mobile-user">
+            <div class="nav-mobile-user-avatar">${initial}</div>
+            <div class="nav-mobile-user-info">
+              <div class="nav-mobile-user-name">${full}</div>
+              <div class="nav-mobile-user-role">${role} access</div>
+            </div>
+          </div>
+          ${role==='admin' ? `<a onclick="navigate('admin');closeIndexMobileNav()" class="nav-mobile-links" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;color:var(--accent);font-size:14px;font-weight:600;cursor:pointer;border:1px solid var(--accent-border);background:var(--accent-pale);margin-bottom:8px"><i class="fas fa-user-shield"></i> Admin Dashboard</a>` : ''}
+          <button class="nav-mobile-logout" onclick="doLogout();closeIndexMobileNav()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>`;
+    }
+    if(mobileNavActions) mobileNavActions.style.display = 'none';
+
   } else {
+    // ── Desktop nav — not logged in ──
     wrap.innerHTML = `
       <button class="btn-nav-ghost" onclick="navigate('login')">Sign In</button>
       <button class="btn-nav-primary" onclick="navigateToRequest()"><i class="fas fa-rocket"></i> Get Access</button>`;
+
+    // ── Mobile drawer — not logged in ──
+    if(mobileUserSection) mobileUserSection.innerHTML = '';
+    if(mobileNavActions)  mobileNavActions.style.display = 'flex';
   }
 }
 

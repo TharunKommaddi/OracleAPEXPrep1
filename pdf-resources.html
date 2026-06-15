@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo">
     <div class="nav-logo-mark">A</div>
@@ -43,6 +44,7 @@
   </button>
 </nav>
 
+<!-- MOBILE DRAWER -->
 <div class="nav-mobile-drawer" id="mobileDrawer">
   <ul class="nav-mobile-links">
     <li><div class="nav-mobile-section-label">Topics</div></li>
@@ -65,19 +67,15 @@
     <li><a href="index.html#login" onclick="closeHamburger()"><i class="fas fa-rocket"></i> Request Access</a></li>
     <li><a href="index.html#admin" onclick="closeHamburger()"><i class="fas fa-user-shield"></i> Admin</a></li>
   </ul>
-
-  <!-- User info injected by JS -->
   <div id="mobileUserSection"></div>
-
-  <!-- Shown when NOT logged in -->
   <div class="nav-mobile-actions" id="mobileNavActions">
     <a href="index.html" class="nav-mobile-btn ghost" onclick="closeHamburger()"><i class="fas fa-sign-in-alt"></i> Sign In</a>
     <a href="index.html" class="nav-mobile-btn primary" onclick="closeHamburger()"><i class="fas fa-rocket"></i> Get Access</a>
   </div>
 </div>
 
+<!-- SINGLE CLEAN SCRIPT BLOCK — hamburger + user info -->
 <script>
-/* ── Hamburger Menu ── */
 var _hbOpen = false;
 
 function toggleHamburger(){
@@ -111,22 +109,15 @@ document.addEventListener('click', function(e){
   if(!_hbOpen) return;
   var d = document.getElementById('mobileDrawer');
   var b = document.getElementById('navHamburger');
-  if(d && b && !d.contains(e.target) && !b.contains(e.target)){
-    closeHamburger();
-  }
+  if(d && b && !d.contains(e.target) && !b.contains(e.target)) closeHamburger();
 });
 
 window.addEventListener('resize', function(){
   if(window.innerWidth > 768) closeHamburger();
 });
 
-/* ── Mobile User Info ── */
 function mobileLogout(){
-  try{
-    ['isLoggedIn','username','userEmail','accessType','loginTime'].forEach(function(k){
-      sessionStorage.removeItem(k);
-    });
-  }catch(e){}
+  try{ ['isLoggedIn','username','userEmail','accessType','loginTime'].forEach(function(k){ sessionStorage.removeItem(k); }); }catch(e){}
   window.location.href = 'index.html';
 }
 
@@ -142,18 +133,18 @@ function updateMobileUser(){
     if(gst) gst.style.display = 'none';
     sec.innerHTML =
       '<div style="padding-top:12px">' +
-        '<div class="nav-mobile-divider" style="margin-bottom:12px"></div>' +
-        '<div class="nav-mobile-section-label" style="padding:0 0 8px 0">Account</div>' +
-        '<div class="nav-mobile-user">' +
-          '<div class="nav-mobile-user-avatar">' + av + '</div>' +
-          '<div class="nav-mobile-user-info">' +
-            '<div class="nav-mobile-user-name">' + nm + '</div>' +
-            '<div class="nav-mobile-user-role">' + rl + ' access</div>' +
-          '</div>' +
+      '<div class="nav-mobile-divider" style="margin-bottom:12px"></div>' +
+      '<div class="nav-mobile-section-label" style="padding:0 0 8px 0">Account</div>' +
+      '<div class="nav-mobile-user">' +
+        '<div class="nav-mobile-user-avatar">' + av + '</div>' +
+        '<div class="nav-mobile-user-info">' +
+          '<div class="nav-mobile-user-name">' + nm + '</div>' +
+          '<div class="nav-mobile-user-role">' + rl + ' access</div>' +
         '</div>' +
-        '<button class="nav-mobile-logout" onclick="mobileLogout()">' +
-          '<i class="fas fa-sign-out-alt"></i> Logout' +
-        '</button>' +
+      '</div>' +
+      '<button class="nav-mobile-logout" onclick="mobileLogout()">' +
+        '<i class="fas fa-sign-out-alt"></i> Logout' +
+      '</button>' +
       '</div>';
   }
 }
@@ -161,6 +152,7 @@ function updateMobileUser(){
 document.addEventListener('DOMContentLoaded', updateMobileUser);
 </script>
 
+<!-- PAGE HEADER -->
 <div class="page-header">
   <div style="max-width:1000px;margin:0 auto">
     <div class="page-eyebrow">Study Materials</div>
@@ -169,7 +161,7 @@ document.addEventListener('DOMContentLoaded', updateMobileUser);
   </div>
 </div>
 
-<!-- Main viewer layout -->
+<!-- MAIN VIEWER LAYOUT -->
 <div class="pdf-page-wrap">
 
   <!-- Sidebar -->
@@ -243,7 +235,7 @@ document.addEventListener('DOMContentLoaded', updateMobileUser);
   </div>
 </div>
 
-<!-- Coming soon section -->
+<!-- COMING SOON -->
 <div class="pdf-coming-section">
   <div style="margin-bottom:16px">
     <div class="page-eyebrow">Coming Soon</div>
@@ -268,50 +260,51 @@ document.addEventListener('DOMContentLoaded', updateMobileUser);
 
 <div class="pdf-toast" id="toast"></div>
 
-<div id="footer-placeholder"></div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo"><div class="footer-logo-mark">A</div><span class="footer-logo-text">APEX Interview Mastery</span></div>
+      <p class="footer-brand-desc">The most comprehensive preparation platform for Oracle APEX developers. Built with care, for developers who want to land the job.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Topics</h4>
+      <ul>
+        <li><a href="oracle-sql.html">Oracle SQL</a></li>
+        <li><a href="plsql.html">PL/SQL</a></li>
+        <li><a href="oracle-apex.html">Oracle APEX</a></li>
+        <li><a href="oracle-apex-quiz.html">APEX Quiz</a></li>
+        <li><a href="pdf-resources.html">PDF Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Frontend</h4>
+      <ul>
+        <li><a href="html-questions.html">HTML</a></li>
+        <li><a href="css-questions.html">CSS</a></li>
+        <li><a href="javascript-questions.html">JavaScript</a></li>
+        <li><a href="jquery-questions.html">jQuery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#login">Request Access</a></li>
+        <li><a href="index.html#admin">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 APEX Interview Mastery. All rights reserved.</span>
+    <span class="footer-made">Made with <i class="fas fa-heart"></i> for Oracle developers</span>
+  </div>
+</footer>
 
-<!-- SCRIPTS -->
-<script src="assets/script.js"></script>
+<!-- PDF DATA + APP SCRIPT — must be AFTER HTML elements -->
 <script>
-function toggleHamburger(e){
-  if(e) e.stopPropagation();
-  var d=document.getElementById('mobileDrawer'),b=document.getElementById('navHamburger');
-  if(!d||!b)return;
-  var o=d.classList.contains('open');
-  d.classList.toggle('open',!o);b.classList.toggle('open',!o);
-  document.body.style.overflow=o?'':'hidden';
-}
-function closeHamburger(){
-  var d=document.getElementById('mobileDrawer'),b=document.getElementById('navHamburger');
-  if(d)d.classList.remove('open');if(b)b.classList.remove('open');
-  document.body.style.overflow='';
-}
-document.addEventListener('click',function(e){
-  var d=document.getElementById('mobileDrawer'),b=document.getElementById('navHamburger');
-  if(!d||!b)return;
-  if(d.classList.contains('open')&&!d.contains(e.target)&&!b.contains(e.target))closeHamburger();
-});
-window.addEventListener('resize',function(){if(window.innerWidth>768)closeHamburger();});
-function updateMobileUserDrawer(){
-  var loggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
-  var userName = sessionStorage.getItem('username') || sessionStorage.getItem('userEmail') || '';
-  var role     = sessionStorage.getItem('accessType') || 'user';
-  var initial  = userName.charAt(0).toUpperCase() || 'U';
-  var section  = document.getElementById('mobileUserSection');
-  var actions  = document.getElementById('mobileNavActions');
-  if(!section) return;
-  if(loggedIn && userName){
-    section.innerHTML = 
-      '<div style="padding-top:12px">' +
-      '<div class="nav-mobile-divider" style="margin-bottom:12px"></div>' +
-      '<div class="nav-mobile-section-label" style="padding:0 0 8px 0">Account</div>' +
-      '<div class="nav-mobile-user">' +
-      '<div class="nav-mobile-user-avatar">' + initial + '</div>' +
-      '<div class="nav-mobile-user-info">' +
-      '<div class="nav-mobile-user-name">' + userName + '</div>' +
-      '<div class="nav-mobile-user-role">' + role + ' access</div>' +
-      '</div></div>' +
-      const PDF_RESOURCES = [
+const PDF_RESOURCES = [
   {
     id: 'apex-mcq',
     filename: 'Apex MCQ assessment (3).pdf',
@@ -377,9 +370,6 @@ const PDFApp = {
 
   rawUrl(filename) {
     return `https://raw.githubusercontent.com/${GITHUB.user}/${GITHUB.repo}/${GITHUB.branch}/${GITHUB.folder}/${encodeURIComponent(filename)}`;
-  },
-  webUrl(filename) {
-    return `https://github.com/${GITHUB.user}/${GITHUB.repo}/blob/${GITHUB.branch}/${GITHUB.folder}/${encodeURIComponent(filename)}`;
   },
   pagesUrl(filename) {
     return `https://${GITHUB.user}.github.io/${GITHUB.repo}/PDF/${encodeURIComponent(filename)}`;
@@ -475,41 +465,37 @@ const PDFApp = {
   },
 
   retry()    { if (this.current) this.load(this.current.id); },
+
   download() {
     if (!this.current) return;
-    const link = document.createElement('a');
+    const link    = document.createElement('a');
     link.href     = this.rawUrl(this.current.filename);
     link.download = this.current.filename;
     link.target   = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    this.toast(`"${this.current.title}" — download started!`);
+    this.toast('"' + this.current.title + '" — download started!');
   },
+
   openTab()  { if (this.current) window.open(this.pagesUrl(this.current.filename), '_blank'); },
+
   fullscreen() {
     const frame = document.getElementById('pdfFrame');
     const fn = frame.requestFullscreen || frame.webkitRequestFullscreen || frame.msRequestFullscreen;
     if (fn) fn.call(frame);
   },
+
   toast(msg) {
     const t = document.getElementById('toast');
-    t.innerHTML = `<i class="fas fa-check-circle"></i> ${msg}`;
+    t.innerHTML = '<i class="fas fa-check-circle"></i> ' + msg;
     t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 3500);
   }
 };
 
-document.addEventListener('DOMContentLoaded', function() { PDFApp.init(); });
+document.addEventListener('DOMContentLoaded', function(){ PDFApp.init(); });
 </script>
-
-
-
-</script>
-
-
-</script>
-
 
 </body>
 </html>

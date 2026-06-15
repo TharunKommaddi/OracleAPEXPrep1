@@ -79,70 +79,71 @@
 </div>
 
 <script>
-var _hamburgerOpen = false;
-
+var _hbOpen = false;
 function toggleHamburger(){
-  _hamburgerOpen = !_hamburgerOpen;
-  var d = document.getElementById('mobileDrawer');
-  var b = document.getElementById('navHamburger');
-  if(!d || !b) return;
-  if(_hamburgerOpen){
-    d.style.display = 'block';
-    setTimeout(function(){ d.classList.add('open'); }, 10);
+  _hbOpen = !_hbOpen;
+  var d=document.getElementById('mobileDrawer');
+  var b=document.getElementById('navHamburger');
+  if(!d||!b)return;
+  if(_hbOpen){
+    d.style.display='block';
+    setTimeout(function(){d.classList.add('open');},10);
     b.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  } else {
+    document.body.style.overflow='hidden';
+  }else{
     d.classList.remove('open');
     b.classList.remove('open');
-    document.body.style.overflow = '';
-    setTimeout(function(){ if(!_hamburgerOpen) d.style.display = ''; }, 300);
+    document.body.style.overflow='';
+    setTimeout(function(){d.style.display='none';},300);
   }
 }
-
 function closeHamburger(){
-  _hamburgerOpen = false;
-  var d = document.getElementById('mobileDrawer');
-  var b = document.getElementById('navHamburger');
-  if(d){ d.classList.remove('open'); setTimeout(function(){ d.style.display=''; }, 300); }
-  if(b) b.classList.remove('open');
-  document.body.style.overflow = '';
+  _hbOpen=false;
+  var d=document.getElementById('mobileDrawer');
+  var b=document.getElementById('navHamburger');
+  if(d){d.classList.remove('open');setTimeout(function(){d.style.display='none';},300);}
+  if(b)b.classList.remove('open');
+  document.body.style.overflow='';
 }
-
-document.addEventListener('click', function(e){
-  var d = document.getElementById('mobileDrawer');
-  var b = document.getElementById('navHamburger');
-  if(!d || !b || !_hamburgerOpen) return;
-  if(!d.contains(e.target) && !b.contains(e.target)){
-    closeHamburger();
+document.addEventListener('click',function(e){
+  if(!_hbOpen)return;
+  var d=document.getElementById('mobileDrawer');
+  var b=document.getElementById('navHamburger');
+  if(d&&b&&!d.contains(e.target)&&!b.contains(e.target))closeHamburger();
+});
+window.addEventListener('resize',function(){if(window.innerWidth>768)closeHamburger();});
+function mobileLogout(){
+  try{['isLoggedIn','username','userEmail','accessType','loginTime'].forEach(function(k){sessionStorage.removeItem(k);});}catch(e){}
+  window.location.href='index.html';
+}
+function updateMobileUser(){
+  var li=sessionStorage.getItem('isLoggedIn')==='true';
+  var nm=sessionStorage.getItem('username')||sessionStorage.getItem('userEmail')||'';
+  var rl=sessionStorage.getItem('accessType')||'user';
+  var av=nm.charAt(0).toUpperCase()||'U';
+  var sec=document.getElementById('mobileUserSection');
+  var gst=document.getElementById('mobileNavActions');
+  if(!sec)return;
+  if(li&&nm){
+    if(gst)gst.style.display='none';
+    sec.innerHTML=
+      '<div style="padding-top:12px">'+
+      '<div class="nav-mobile-divider" style="margin-bottom:12px"></div>'+
+      '<div class="nav-mobile-section-label" style="padding:0 0 8px 0">Account</div>'+
+      '<div class="nav-mobile-user">'+
+        '<div class="nav-mobile-user-avatar">'+av+'</div>'+
+        '<div class="nav-mobile-user-info">'+
+          '<div class="nav-mobile-user-name">'+nm+'</div>'+
+          '<div class="nav-mobile-user-role">'+rl+' access</div>'+
+        '</div>'+
+      '</div>'+
+      '<button class="nav-mobile-logout" onclick="mobileLogout()">'+
+        '<i class="fas fa-sign-out-alt"></i> Logout'+
+      '</button>'+
+      '</div>';
   }
-});
-
-window.addEventListener('resize', function(){
-  if(window.innerWidth > 768) closeHamburger();
-});
-function updateMobileUserDrawer(){
-  var loggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
-  var userName = sessionStorage.getItem('username') || sessionStorage.getItem('userEmail') || '';
-  var role     = sessionStorage.getItem('accessType') || 'user';
-  var initial  = userName.charAt(0).toUpperCase() || 'U';
-  var section  = document.getElementById('mobileUserSection');
-  var actions  = document.getElementById('mobileNavActions');
-  if(!section) return;
-  if(loggedIn && userName){
-    section.innerHTML = 
-      '<div style="padding-top:12px">' +
-      '<div class="nav-mobile-divider" style="margin-bottom:12px"></div>' +
-      '<div class="nav-mobile-section-label" style="padding:0 0 8px 0">Account</div>' +
-      '<div class="nav-mobile-user">' +
-      '<div class="nav-mobile-user-avatar">' + initial + '</div>' +
-      '<div class="nav-mobile-user-info">' +
-      '<div class="nav-mobile-user-name">' + userName + '</div>' +
-      '<div class="nav-mobile-user-role">' + role + ' access</div>' +
-      '</div></div>' +
-      '<button class="nav-mobile-logout" onclick="mobileLogout
-
-document.addEventListener('DOMContentLoaded', updateMobileUserDrawer);
-
+}
+document.addEventListener('DOMContentLoaded',updateMobileUser);
 </script>
 
 <div class="page-header">
@@ -587,38 +588,6 @@ function copyCode(btn) {
 
 </script>
 
-<script>
-(function(){
-  try{
-    var li=sessionStorage.getItem('isLoggedIn');
-    var nm=sessionStorage.getItem('username')||sessionStorage.getItem('userEmail')||'';
-    var rl=sessionStorage.getItem('accessType')||'user';
-    var av=nm.charAt(0).toUpperCase()||'U';
-    var sec=document.getElementById('mobileUserSection');
-    var gst=document.getElementById('mobileNavActions');
-    if(li==='true'&&nm&&sec){
-      if(gst)gst.style.display='none';
-      sec.innerHTML='<div style="padding-top:12px">'+
-        '<div class="nav-mobile-divider" style="margin-bottom:12px"></div>'+
-        '<div class="nav-mobile-section-label" style="padding:0 0 8px 0">Account</div>'+
-        '<div class="nav-mobile-user">'+
-          '<div class="nav-mobile-user-avatar">'+av+'</div>'+
-          '<div class="nav-mobile-user-info">'+
-            '<div class="nav-mobile-user-name">'+nm+'</div>'+
-            '<div class="nav-mobile-user-role">'+rl+' access</div>'+
-          '</div>'+
-        '</div>'+
-        '<button class="nav-mobile-logout" onclick="logoutMobile()">'+
-          '<i class="fas fa-sign-out-alt"></i> Logout'+
-        '</button>'+
-        '</div>';
-    }
-  }catch(e){}
-})();
-function logoutMobile(){
-  try{['isLoggedIn','username','userEmail','accessType','loginTime'].forEach(function(k){sessionStorage.removeItem(k);});}catch(e){}
-  window.location.href='index.html';
-}
-</script>
+
 </body>
 </html>

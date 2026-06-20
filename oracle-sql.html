@@ -9,6 +9,24 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+/* ---- Edit Mode styles ---- */
+.edit-mode-bar{display:flex;align-items:center;gap:10px;justify-content:flex-end;max-width:1000px;margin:0 auto 10px;padding:0 16px}
+.btn-edit-toggle{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:8px;border:1px solid #2d6446;background:#fff;color:#2d6446;font-weight:600;font-size:14px;cursor:pointer;transition:.15s}
+.btn-edit-toggle:hover{background:#f0f9f4}
+.btn-edit-toggle.active{background:#2d6446;color:#fff}
+.editable-field{outline:1px dashed transparent;border-radius:4px;transition:.15s;cursor:text}
+body.edit-mode .editable-field{outline:1px dashed #f59e0b;background:#fffbeb;padding:4px 6px;margin:-4px -6px}
+body.edit-mode .editable-field:focus{outline:2px solid #2d6446;background:#fff}
+.edit-download-bar{position:fixed;bottom:0;left:0;right:0;display:none;background:#1a1a1a;color:#fff;padding:14px 20px;align-items:center;justify-content:center;gap:16px;z-index:9999;box-shadow:0 -4px 16px rgba(0,0,0,.25)}
+body.edit-mode .edit-download-bar{display:flex}
+.edit-download-bar span{font-size:13px;opacity:.85}
+.btn-edit-download{background:#2d6446;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn-edit-download:hover{background:#235038}
+.edit-save-indicator{display:none;color:#a8d080;font-size:13px;align-items:center;gap:6px}
+.edit-save-indicator.show{display:inline-flex}
+body.edit-mode{padding-bottom:64px}
+</style>
 </head>
 <body>
 
@@ -154,6 +172,11 @@ document.addEventListener('DOMContentLoaded',updateMobileUser);
 </div>
 
 <div class="container">
+  <div class="edit-mode-bar">
+    <button class="btn-edit-toggle" id="editModeToggle" onclick="toggleEditMode()">
+      <i class="fas fa-pen-to-square"></i> <span id="editModeLabel">Edit Mode: Off</span>
+    </button>
+  </div>
   <div class="filter-section">
     <div class="filter-title"><i class="fas fa-database"></i> Filter Questions</div>
     <div class="filter-tabs">
@@ -9899,6 +9922,102 @@ function copyCode(btn) {
   btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
   btn.style.color = '#a8d080';
   setTimeout(function() { btn.innerHTML = orig; btn.style.color = ''; }, 2000);
+}
+
+/* ============================================================
+   EDIT MODE
+   - Makes answer text + key takeaway text editable in-browser.
+   - Edits live only in this browser tab's DOM (nothing is sent
+     anywhere). Click "Download Updated HTML" to export the
+     entire page, with your edits baked in, as a new .html file
+     you can re-upload to GitHub to replace the old one.
+   ============================================================ */
+var _editModeOn = false;
+
+function toggleEditMode() {
+  _editModeOn = !_editModeOn;
+  document.body.classList.toggle('edit-mode', _editModeOn);
+  var btn = document.getElementById('editModeToggle');
+  var label = document.getElementById('editModeLabel');
+  if (_editModeOn) {
+    btn.classList.add('active');
+    label.textContent = 'Edit Mode: On';
+    markEditableFields();
+    ensureDownloadBar();
+    // Auto-expand all questions so edits are easy to find
+    document.querySelectorAll('.question-content').forEach(function(c){ c.style.display = 'block'; });
+    document.querySelectorAll('.question-toggle').forEach(function(i){ i.classList.add('rotated'); });
+  } else {
+    btn.classList.remove('active');
+    label.textContent = 'Edit Mode: Off';
+  }
+}
+
+function markEditableFields() {
+  // Answer paragraphs
+  document.querySelectorAll('.ans-txt').forEach(function(el) {
+    el.contentEditable = 'true';
+    el.classList.add('editable-field');
+  });
+  // Key Takeaway paragraphs
+  document.querySelectorAll('.rich-takeaway p').forEach(function(el) {
+    el.contentEditable = 'true';
+    el.classList.add('editable-field');
+  });
+  // Question title text (Q1. What is SQL? etc.)
+  document.querySelectorAll('.question-text').forEach(function(el) {
+    el.contentEditable = 'true';
+    el.classList.add('editable-field');
+  });
+}
+
+function ensureDownloadBar() {
+  if (document.getElementById('editDownloadBar')) return;
+  var bar = document.createElement('div');
+  bar.id = 'editDownloadBar';
+  bar.className = 'edit-download-bar';
+  bar.innerHTML =
+    '<span><i class="fas fa-circle-info"></i> Editing locally in this tab only — nothing is saved until you download.</span>' +
+    '<button class="btn-edit-download" onclick="downloadUpdatedHtml()"><i class="fas fa-download"></i> Download Updated HTML</button>' +
+    '<span class="edit-save-indicator" id="editSaveIndicator"><i class="fas fa-check"></i> Downloaded!</span>';
+  document.body.appendChild(bar);
+}
+
+function downloadUpdatedHtml() {
+  // Clone the live DOM so we don't disturb the page currently being edited
+  var clone = document.documentElement.cloneNode(true);
+
+  // Strip editing artifacts from the exported copy so the re-uploaded
+  // file opens cleanly (edit mode off, no stray outlines/contenteditable)
+  clone.querySelectorAll('.editable-field').forEach(function(el) {
+    el.removeAttribute('contenteditable');
+    el.classList.remove('editable-field');
+  });
+  var clonedBody = clone.querySelector('body');
+  if (clonedBody) clonedBody.classList.remove('edit-mode');
+  var clonedToggle = clone.querySelector('#editModeLabel');
+  if (clonedToggle) clonedToggle.textContent = 'Edit Mode: Off';
+  var clonedBtn = clone.querySelector('#editModeToggle');
+  if (clonedBtn) clonedBtn.classList.remove('active');
+  var clonedBar = clone.querySelector('#editDownloadBar');
+  if (clonedBar) clonedBar.parentNode.removeChild(clonedBar);
+
+  var htmlOut = '<!DOCTYPE html>\n' + clone.outerHTML;
+  var blob = new Blob([htmlOut], { type: 'text/html' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'oracle-sql.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  var ind = document.getElementById('editSaveIndicator');
+  if (ind) {
+    ind.classList.add('show');
+    setTimeout(function(){ ind.classList.remove('show'); }, 2500);
+  }
 }
 </script>
 
